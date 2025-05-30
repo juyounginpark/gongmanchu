@@ -108,6 +108,18 @@ screen say(who, what):
         text what id "what"
 
 
+screen set_name(title, init_name):
+    frame:
+        xpadding 50
+        ypadding 50
+        xalign 0.5 yalign 0.5
+        vbox:
+            spacing 20
+            text title xalign 0.5
+            input default init_name xalign 0.5
+
+
+
     ## 사이드 이미지가 있는 경우 글자 위에 표시합니다. 휴대폰 환경에서는 보이지
     ## 않습니다.
     if not renpy.variant("small"):

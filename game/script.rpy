@@ -16,6 +16,7 @@ image scene4_wakeup = "scene4_wakeup.jpg"
 image scene5_library ="scene5_library.jpg"
 image scene7_night_haedalroom = "scene7_night_haedalroom.png"
 image scene7_bokdo = "scene7_bokdo.jpg"
+image scene7_night_gigsa = "scene7_night_gigsa.jpg"
 image scene2_classroom = "scene2_classroom.jpg"
 image nightcall = "nightcall.png"
 image nightcalling = "nightcalling.png"
@@ -43,27 +44,37 @@ define hyeonseo = Character('이현서',color ="#5528de")
 define minsu = Character('김민수 교수',color ="#0ecd2b")
 
 # 컬러_스페셜
+default name = "서경민"
 define parkjuyoung = Character('박주영', color="#ffd93f")
 define bridge1 = Character('한국대학교 총장', color="#3c872d")
 define haedal_seo = Character('서주혜', color="#c14772")
 define haedal_yang = Character('양승현', color="#163a0f")
+define na = Character( "서경민" , color="#ffffff") 
 
 default juyoun_love_num=0
 default juyoun_negai=False
 default minsu_love_num=0
 default coffee = False
 default jbo = False
+default democratic_party = 0
+            
 
 
 label start:
     "본 게임물은 픽션이며, 등장하는 인물, 지명, 기관, 사건, 단체 및 배경 등은 실제와 어떠한 관련도 없음을 알려드립니다."
+    
+
+    
+    
+    # na "낯설지 않아 너의 오묘한 눈빛, 평행한 느낌"
+
     play music "audio/bgm/mainbgm.mp3"
     scene scene1yard with fade
     #1. 입학식에서 처음 만난 선배
     show gyoungmin_standard at center 
-    gyoungmin "여기가 한국대학교..?"
-    gyoungmin "엄청 넓다.."
-    gyoungmin "앗, 입학식 시간이 곧이잖아?"
+    "여기가 한국대학교..?"
+    "엄청 넓다.."
+    "앗, 입학식 시간이 곧이잖아?"
     hide gyoungmin_standard
     
     show juyoun_shy at center
@@ -71,17 +82,20 @@ label start:
     with vpunch
     juyoun "혹시 컴퓨터학부 신입생인가요?"
 
-    gyoungmin "아.. "
+    "아.. "
     extend "넵 !!"
     hide juyoun_shy
     show juyoun_standard at center
-    gyoungmin "(우와,, 예쁘다)"
+    "(우와,, 예쁘다)"
    
 
     juyoun "저는 컴퓨터학부 학생회장 3학년 '박주연'이에요."
-
+    juyoun "혹시 이름이 어떻게 되나요?"
+    $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
+    # $ na = Character( name , color="#ffffff")
+    $ gyoungmin = Character(name, color="#c8ffc8")
     gyoungmin "앗,, 안녕하세요!"
-    gyoungmin "저는 새로 입학하게 된 1학년 서경민입니다!"
+    gyoungmin "저는 새로 입학하게 된 1학년 [name]입니다!"
 
     juyoun "후훗, 반가워요."
     juyoun "대강당까지 안내해 줄게요."
@@ -198,6 +212,8 @@ label start:
         jump mustsul
 
     label mustsul:
+        if democratic_party > 3:
+            jump minju_bad
         juyoun "이 사람! "
         extend "술 마셔? "
         extend "안 마셔?"
@@ -209,10 +225,16 @@ label start:
             jump scene1_4
 
         "안마셔!":
+            $democratic_party = democratic_party + 1
             juyoun "진짜로요"
             extend "...?"
             juyoun "그러면..."
-            jump mustsul            
+            jump mustsul          
+
+    label minju_bad:
+        scene suljari with fade
+        show juyoun_standard  
+        juyoun ""
 
 
     
@@ -435,7 +457,7 @@ label start:
                         jump scene2_reply
                     "감사 인사":
                         gyoungmin "그래도 감사 인사는 드려야지."
-                        gyoundmin "빼고 보내드리면 왠지 좋아하지 않으실 것 같아"
+                        gyoungmin "빼고 보내드리면 왠지 좋아하지 않으실 것 같아"
                         jump scene2_email
             "본론부터 적는다.":
                 gyoungmin "근데 이러면 교수님이 내가 누군지 아실까..?"
