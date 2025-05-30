@@ -11,13 +11,13 @@
 ##
 ## 문자열을 _()로 둘러 쌓으면 씌우면 번역의 대상으로 표시됩니다.
 
-define config.name = _("GongManChoo")
+define config.name = _("공대에서 만남을 추구하면 안되는걸까")
 
 
 ## 위에 주어진 제목이 주 메뉴 화면에 표시되는지 결정합니다. 제목을 숨기려면 이것
 ## 을 False로 설정하십시오.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## 게임의 버전입니다.
@@ -29,6 +29,13 @@ define config.version = "1.0"
 ## 하고 단락 사이에 빈 줄을 남겨 둡니다.
 
 define gui.about = _p("""
+김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이
+김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이
+김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이
+김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이
+김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이
+김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이
+김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이김민우게이
 """)
 
 
@@ -154,6 +161,21 @@ define config.window_icon = "gui/window_icon.png"
 ## 이 섹션은 렌파이가 프로젝트를 배포 파일로 만드는 방법을 제어합니다.
 
 init python:
+
+    build.archive("scripts", "all")
+    build.archive("images", "all")
+    build.archive("media", "all")
+
+    build.classify("game/**.rpy", "scripts")
+    build.classify("game/**.rpyc", "scripts")
+
+    build.classify("game/**.jpg", "images")
+    build.classify("game/**.png", "images")
+
+    build.classify("game/**.mp4", "media")
+    build.classify("game/**.webm", "media")
+    build.classify("game/**.mp3", "media")
+    build.classify("game/**.ogg", "media")
 
     ## 다음 함수는 파일 패턴을 사용합니다. 파일 패턴은 대/소문자를 구분하지 않으
     ## 며, /의 유무와 관계없이 기본 디렉터리의 상대 경로와 일치합니다. 여러 패턴
