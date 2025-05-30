@@ -707,6 +707,6 @@ label start:
     #scene7, 족보만 믿었는데...(족보 X)
     label scene6_jbx:
 
-        
 
+    ##scene8
     return
