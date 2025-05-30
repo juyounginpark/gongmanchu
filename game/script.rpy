@@ -435,7 +435,7 @@ label start:
                         jump scene2_reply
                     "감사 인사":
                         gyoungmin "그래도 감사 인사는 드려야지."
-                        gyoundmin "빼고 보내드리면 왠지 좋아하지 않으실 것 같아"
+                        gyoungmin "빼고 보내드리면 왠지 좋아하지 않으실 것 같아"
                         jump scene2_email
             "본론부터 적는다.":
                 gyoungmin "근데 이러면 교수님이 내가 누군지 아실까..?"
@@ -936,8 +936,7 @@ label start:
     label scene7:
         scene scene7_night_haedalroom with fade 
         show juyoun_standard
-        juyoun "함수가 자기 자신을 호출 하는 것을"
-        juyoun "재귀 함수라고 불러요."
+        juyoun "함수가 자기 자신을 호출 하는 것을 재귀 함수라고 불러요."
         juyoun "꼭 탈출 조건 붙여주기!"
         gyoungmin "조건문에 return;을 넣어주란 말인가요?"
         juyoun "네! 바로 그거에요."
@@ -949,10 +948,10 @@ label start:
         juyoun "그럼 다행이에요"
         hide juyoun_love
         show juyoun_love
-        gyoungmin "선배..그런데..."
+        gyoungmin "선배.. 그런데..."
         juyoun "네?"
         gyoungmin "아!"with hpunch
-        extend "아니에요!!!" with hpunch
+        gyoungmin "아니에요!!!" with hpunch
         gyoungmin "잠깐 저 화장실 좀 갔다올게요!!"
         juyoun "크크크"
         extend " 그래요. 갔다와요."
@@ -962,10 +961,14 @@ label start:
         gyoungmin "(어떡하지 어떡하지)"
         show minsu_standard
         minsu "경민군,"
-        extend " 아직도 공부중인거예요?"
-        gyoungmin "앗, 넵 교수님."
+        extend " 아직도 공부중인가요요?"
+        gyoungmin "앗, " with vpunch
+        extend "넵! 교수님."
         minsu "밤샘하느라 고생많네요."
-        minsu "혹시 내일 나랑 둘이 커피챗 할 생각 없나요... "
+        gyoungmin "하하..."
+        gyoungmin "(교수님 떄문이잖아요...)"
+        minsu "흠흠.."
+        minsu ""
         extend "?"
         minsu "이번 중간고사.. 굉장히 잘 쳤길래."
         "왠지모를 쑥스러움이 그의 얼굴에서 느껴진다."
