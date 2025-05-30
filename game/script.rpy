@@ -57,7 +57,7 @@ default jbo = False
 
 label start:
     
-    play sound "audio/sound/bbabba.mp3"
+   
     "본 게임물은 픽션이며, 등장하는 인물, 지명, 기관, 사건, 단체 및 배경 등은 실제와 어떠한 관련도 없음을 알려드립니다."
     play music "audio/bgm/mainbgm.mp3"
     
@@ -816,6 +816,7 @@ label start:
 
     #scene3_3. 첫 캠퍼스 데이트
     label scene3_3:
+        play sound  "audio/bgm/BirdinPark.mp3"
         scene scene3_3_bench with fade
         hide juyoun_shy
         #scene scene4 with dissolve
@@ -834,8 +835,9 @@ label start:
         gyoungmin "(선배 얼굴이 벚꽃보다 예쁘게 느껴진다...)"
         "순간"
         "나는 지금을 "
-        extend "영원지 잊을 수 없을 것이라고"
+        extend "영원히 잊을 수 없을 것이라고"
         "직감했다."
+        stop sound 
         scene black with fade
         hide juyoun_love
         jump scene5
