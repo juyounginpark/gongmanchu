@@ -56,8 +56,11 @@ default jbo = False
 
 
 label start:
+    
+    play sound "audio/sound/bbabba.mp3"
     "본 게임물은 픽션이며, 등장하는 인물, 지명, 기관, 사건, 단체 및 배경 등은 실제와 어떠한 관련도 없음을 알려드립니다."
     play music "audio/bgm/mainbgm.mp3"
+    
     scene scene1yard with fade
     #1. 입학식에서 처음 만난 선배
     show gyoungmin_standard at center 
