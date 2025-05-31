@@ -55,16 +55,70 @@ define na = Character( "서경민" , color="#ffffff")
 
 default juyoun_love_num=0
 default juyoun_negai=False
+default juyoun_negai_check=False
 default minsu_love_num=0
 default coffee = False
 default jbo = False
 default democratic_party = 0
+
+
+init:
+    screen stat_overlay:
+        frame:
+            padding (15, 15)
+            background "#4f5a6680"
+            align (1.0, 0.0)
+            xmaximum 250
+            ymaximum 200
+
+            vbox:
+                if juyoun_love_num != 0 :
+                    if juyoun_negai and juyoun_negai_check:
+                        text "주연 🎫{space=15}[juyoun_arr.count(True)*25]" size 28
+                    else :
+                        text "주연{space=15}[juyoun_arr.count(True)*25]" size 28
+                    text " " size 1
+                    bar:
+                        value juyoun_arr.count(True)*25
+                        range 100
+                        style "fixed_bar"
+
+                text " " size 3
+                if minsu_love_num != 0 :
+                    text "민수{space=15}[minsu_arr.count(True)*25]" size 28
+                    text " " size 1
+                    bar :
+                        value minsu_arr.count(True)*25
+                        range 100
+                        xalign 0.0
+                        style "fixed_bar"
+
+
+init -5 python:
+    style.fixed_bar = Style(style.default)
+
+    style.fixed_bar.xmaximum = 200
+    style.fixed_bar.ymaximum = 15
+
+    style.fixed_bar.left_gutter = 0
+    style.fixed_bar.right_gutter = 0
+
+    style.fixed_bar.left_bar = Frame("images/bar_full.png", 0, 0)
+    style.fixed_bar.right_bar = Frame("images/bar_empty.png", 0, 0)
+
+define love = [0, 0]
+define juyoun_arr = [False, False, False, False]
+define minsu_arr = [False, False, False, False]
+
             
 
 
 label start:
     "본 게임물은 픽션이며, 등장하는 인물, 지명, 기관, 사건, 단체 및 배경 등은 실제와 어떠한 관련도 없음을 알려드립니다."
     
+    show screen stat_overlay
+    # $ love[1] += 30
+    # hide screen stat_overlay
 
     
     
@@ -216,7 +270,7 @@ label start:
         jump mustsul
 
     label mustsul:
-        if democratic_party > 3:
+        if democratic_party > 2:
             jump minju_bad
         juyoun "이 사람! "
         extend "술 마셔? "
@@ -348,7 +402,7 @@ label start:
         juyoun "제가 흑장미 .."
         hide juyoun_standard
         show juyoun_love
-        juyoun"할게요!!"
+        juyoun "할게요!!"
         gyoungmin "네..?"
         hide juyoun_love
         menu:
@@ -360,8 +414,10 @@ label start:
                 extend "나중에 소원 들어주기에요?"
                 gyoungmin "ㄴ.."
                 extend " 네!"
-                "선배가 '소원권'을 획득했다."
                 $juyoun_negai = True
+                $juyoun_negai_check = True
+                "선배가 '소원권'을 획득했다."
+                $juyoun_negai_check = False
             "제가 걸린거니까 제가 마실게요..!":
                 gyoungmin "제가 걸린거니까 제가 마실게요..!"
                 show juyoun_standard
@@ -478,6 +534,8 @@ label start:
         gyoungmin "감사합니다, 교수님 !!"
         "'교수님이 사준 커피'를 획득했다."
         $minsu_love_num = minsu_love_num + 1
+        $ minsu_arr[0] = False
+        $ minsu_arr[0] = True
         $coffee = True
                 
 
@@ -516,7 +574,9 @@ label start:
                 gyoungmin "주연 선배 !!"
                 gyoungmin "안녕하세요..? "
                 extend "흐흐..."
-                $juyoun_love_num = juyoun_love_num + 1
+                $ juyoun_love_num = juyoun_love_num + 1
+                $ juyoun_arr[0] = False
+                $ juyoun_arr[0] = True
             "그냥 지나간다.":
                 gyoungmin "(빨리 지나가야겠다.)"
         juyoun "어! [s_name]씨!"
@@ -608,6 +668,8 @@ label start:
                 hide hyeonseo_standard
                 hide juyoun_love
                 $juyoun_love_num = juyoun_love_num + 1
+                $ juyoun_arr[1] = False
+                $ juyoun_arr[1] = True
                 jump scene3_2
 
             "아니요..":
@@ -838,6 +900,8 @@ label start:
                 "[name] 올림"
                 gyoungmin "그래도 이정도면 괜찮겠지..?"
                 $minsu_love_num = minsu_love_num + 1
+                $ minsu_arr[1] = False
+                $ minsu_arr[1] = True
         gyoungmin "다시 자야겠다. "
         extend "주연선배와의 약속 전엔 일어나야지.."      
         
@@ -902,6 +966,8 @@ label start:
                     gyoungmin "(선배를 보니 휴식이 필요없어진 기분이야....)"
                     hide juyoun_standard
                     $juyoun_love_num = juyoun_love_num + 1 
+                    $ juyoun_arr[2] = False
+                    $ juyoun_arr[2] = True
                     jump scene6
                 else:
                     gyoungmin "마땅히 드릴게 없네.."
@@ -956,6 +1022,8 @@ label start:
                     hyeonseo "너도? 나도..."
                     gyoungmin "그래도... 준비한건 다 풀었더니 후련하다."
                     $minsu_love_num = minsu_love_num + 1
+                    $ minsu_arr[2] = False
+                    $ minsu_arr[2] = True
                 hide hyeonseo_standard
                 show juyoun_standard at center
                 juyoun "괜찮아요. 시험은 이미 끝났고, "
@@ -1016,6 +1084,8 @@ label start:
                 hide minsu_standard with fade
                 "여운찬 뒷모습이다."
                 $juyoun_love_num = juyoun_love_num + 1 
+                $ juyoun_arr[3] = False
+                $ juyoun_arr[3] = True
             "언제가 좋을까요? 언제든 좋아요.":
                 minsu "그래요?"
                 minsu "[s_name]씨 그럴 거 같았어요."
@@ -1028,6 +1098,8 @@ label start:
                 gyoungmin "네 교수님"
                 hide minsu_standard with fade
                 $minsu_love_num = minsu_love_num + 1
+                $ minsu_arr[3] = False
+                $ minsu_arr[3] = True
         jump scene8_call
 
 
@@ -1067,9 +1139,9 @@ label start:
                 "말문이 막힌듯한 선배의 소리에.."
                 "잠시 침묵을 유지했다."
                 hide nightcalling
-                if juyoun_love_num==4 and juyoun_negai:
+                if juyoun_arr.count(True)==4 and juyoun_negai:
                     jump scene8_love
-                elif juyoun_love_num==4 and juyoun_negai==False:
+                elif juyoun_arr.count(True)==4 and not juyoun_negai:
                     jump scene8_bye
                 else:
                     jump scene8_normal
@@ -1084,9 +1156,9 @@ label start:
                 juyoun "고마워요.."
                 juyoun "날 좋아해줘서"
                 hide nightcalling
-                if juyoun_love_num==4 and juyoun_negai:
+                if juyoun_arr.count(True)==4 and juyoun_negai:
                     jump scene8_love
-                elif juyoun_love_num==4 and juyoun_negai==False:
+                elif juyoun_arr.count(True)==4 and not juyoun_negai:
                     jump scene8_bye
                 else:
                     jump scene8_normal
@@ -1102,7 +1174,7 @@ label start:
                 extend "가장 중요한 건 내 마음이다."
                 "김민수."
                 "내 사랑."
-                if minsu_love_num==4:
+                if minsu_arr.count(True):
                     jump scene8_proffessorlove
                 else:
                     jump scene8_daehakwon
@@ -1123,15 +1195,25 @@ label start:
     label scene8_love:
         scene scene7_night_gigsa
         "Love"
+        return
 
     label scene8_normal: 
         "Normal"
+        return
+
+
     label scene8_bad:
         "bad"
+        return
+
     label scene8_daehakwon: 
         "대학원"
+        return
+
+
     label scene8_proffessorlove: 
         "민수엔딩"
+        return
     
     #호감도 MAX, 소원권X
     label scene8_bye:
