@@ -80,6 +80,7 @@ label start:
     show juyoun_shy at center
     with easeinright
     with vpunch
+    play sound "audio/bgm/hoxycom.mp3"
     juyoun "혹시 컴퓨터학부 신입생인가요?"
 
     "아.. "
@@ -167,14 +168,19 @@ label start:
     label scene1_2: 
         scene night_college
         show juyoun_standard with fade
+        play sound "audio/bgm/iphak.mp3"
         juyoun "입학식 어땠어요?"
         hide juyoun_standard
         show juyoun_shy
+        play sound "audio/bgm/jungmal.mp3"
         juyoun "정말 자랑스럽지 않나요?"
         hide juyoun_shy
         show juyoun_standard
+        play sound "audio/bgm/wanthigh.mp3"
         juyoun "저 고등학교 때 한국대학교 정말 오고 싶었거든요."
+        play sound "audio/bgm/comesul.mp3"
         juyoun "앗..! 저 너무 말이 길었죠.. 끝나고 신입생 뒷풀이 하는데"
+        play sound "audio/bgm/realcome.mp3"
         juyoun "오라는 말을 하려 했었어요"
     menu:
         "좋아요!":
@@ -185,6 +191,7 @@ label start:
         hide juyoun_standard
         show juyoun_love
         juyoun "(웃음)"
+        play sound "audio/bgm/comesulfinal.mp3"
         juyoun "학교 정문에 있는 배 터지는 탕수육으로 와요."
         hide juyoun_love
         jump scene1_3
@@ -193,13 +200,17 @@ label start:
     label scene1_3:
         scene suljari with fade
         show juyoun_standard 
+        play sound "audio/bgm/술처음.mp3"
         juyoun "술은 처음이에요?"
+        play sound "audio/bgm/그럼마시면서배우는술게임.mp3"
         juyoun "그럼 마시면서 배우는 술 게임~"
         juyoun "민주당 "
         extend "민주당 "
         extend "민주당 "
         extend "민주당.."
+        play sound "audio/bgm/경민.mp3"
         juyoun "경민,"
+        play sound "audio/bgm/너숙여.mp3"
         extend "너 숙여!"
         gyoungmin "네..? 넵..!!"
         hide juyoun_standard
@@ -207,6 +218,7 @@ label start:
         jump sulgame1
 
     label sulgame1:
+        play sound "audio/bgm/이제제가하는말에.mp3"
         juyoun "자, "
         extend "이제 제가 하는 말에 대답하면 돼요."
         jump mustsul
@@ -241,6 +253,7 @@ label start:
     label scene1_4:
         scene suljari
         show juyoun_love
+        play sound "audio/bgm/마시면돼요.mp3"
         juyoun "마시면 돼요."
         juyoun "제가 경민씨를 지목했거든요."
         gyoungmin "(눈 감은 사람의 대답에 따라 술 마시는 사람이 결정되는 게임이구나..)"
