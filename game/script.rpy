@@ -1358,6 +1358,7 @@ label start:
         extend "헤어짐의 순간이 다가오고 있었다."
 
         scene scene1yard with fade
+        show juyoun_standard at center
         play sound "audio/bgm/8(1).mp3"
         juyoun "여기."
         extend " 기억나?"
@@ -1390,11 +1391,15 @@ label start:
         play sound "audio/bgm/8(8).mp3"
         juyoun "...그럼 이제 가볼게."
         gyoungmin "..네 선배"
+        hide juyoun_standard
+        scene black with fade
         #암흑
 
         "..."
         "..."
         play sound "audio/bgm/8(9).mp3"
+        scene scene1yard with fade
+        show juyoun_standard at center
         "경민아...!!!" with vpunch
         gyoungmin "ㄴ..네?"
         play sound "audio/bgm/8(10).mp3"
@@ -1439,6 +1444,8 @@ label start:
                 gyoungmin "이 길이 더 이상 두렵지 않아."
 
                 #눈 시울이 붉어지며
+                hide juyoun_standard
+                show juyoun_sad at center
                 play sound "audio/bgm/8(20).mp3"
                 juyoun "경민아… 좋아해."
                 play sound "audio/bgm/8(21).mp3"
@@ -1458,6 +1465,7 @@ label start:
         extend "헤어짐의 순간이 다가오고 있었다."
 
         scene scene1yard with fade
+        show juyoun_standard at center
         play sound "audio/bgm/8(1).mp3" 
         juyoun "여기."
         extend " 기억나?"
@@ -1503,6 +1511,8 @@ label start:
 
         gyoungmin "..네, 선배."
 
+        hide juyoun_standard
+        scene black with fade
         #암흑
         play sound "audio/bgm/nm8(10).mp3"
         juyoun "잘 지내... 경민아"
@@ -1685,6 +1695,7 @@ label start:
         scene scene1yard with fade
         extend "헤어짐의 순간이 다가오고 있었다."
 
+        show juyoun_standard at center
         juyoun "여기."
         extend " 기억나?"
         gyoungmin "못할리가요."
