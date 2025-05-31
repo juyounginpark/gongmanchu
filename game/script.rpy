@@ -89,7 +89,7 @@ label start:
     show juyoun_standard at center
     "(우와.. 예쁘다)"
    
-
+    play sound "audio/bgm/저는컴퓨터학부학생회장.mp3"
     juyoun "저는 컴퓨터학부 학생회장 3학년 박주연이에요."
     juyoun "혹시 이름이 어떻게..."
     $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
@@ -255,6 +255,7 @@ label start:
         show juyoun_love
         play sound "audio/bgm/마시면돼요.mp3"
         juyoun "마시면 돼요."
+        play sound "제가경민씨를지목.mp3"
         juyoun "제가 경민씨를 지목했거든요."
         gyoungmin "(눈 감은 사람의 대답에 따라 술 마시는 사람이 결정되는 게임이구나..)"
         hide juyoun_love
@@ -273,13 +274,16 @@ label start:
         extend "시간이 "
         extend "없어요"
         extend "!!!"
+        play sound "audio/bgm/현서가.mp3"
         juyoun "현서가! "
+        play sound "audio/bgm/좋아하는무슨게임게임.mp3"
         juyoun "좋아하는! "
         extend "랜덤 게임! "
         extend "무슨 게임! "
         extend "게임.."
         hide juyoun_standard
         show juyoun_love at right
+        play sound "audio/bgm/술게임스타트.mp3"
         juyoun "스타트!"
         hide juyoun_love
         show juyoun_standard at right
@@ -296,6 +300,7 @@ label start:
         extend "너가 원하는 사람을 지목하면 돼."
         gyoungmin "으.. "
         extend "응..!!"
+        play sound "audio/bgm/게임이니깐.mp3"
         juyoun "게임이니깐.. "
         extend "편히 골라요."
         jump scene1_4pick
@@ -512,7 +517,7 @@ label start:
         hide hyeonseo_happy
         show juyoun_standard at center
         with fade
-
+        play sound "audio/bgm/부트캠프로코딩알려주는.mp3"
         juyoun "'부트캠프'로 코딩 알려주는 해달! 코딩 왕초보도 환영 ~"
         gyoungmin "선배가 동아리 홍보도 하시는건가 ..."
         gyoungmin "근데 어떡하지... 그날 너무 민폐를 끼쳐서"
@@ -527,7 +532,9 @@ label start:
                 $juyoun_love_num = juyoun_love_num + 1
             "그냥 지나간다.":
                 gyoungmin "(빨리 지나가야겠다.)"
+        play sound "audio/bgm/어경민씨.mp3"
         juyoun "어! 경민씨!"
+        play sound "audio/bgm/그땐잘들어갔어요.mp3"
         juyoun "그땐 잘 들어갔어요?"
         gyoungmin "아... "
         extend "네!!"
@@ -535,10 +542,13 @@ label start:
         juyoun "후후 "
         hide juyoun_standard
         show juyoun_love
+        play sound "audio/bgm/원래신입생때는.mp3"
         extend "원래 신입생 때는 다 그래요."
+        play sound "audio/bgm/경민씨가잘들어갔다면.mp3"
         juyoun "경민씨가 잘 들어갔다면 다행이네요."
         hide juyoun_love
         show juyoun_standard
+        play sound "audio/bgm/그래서그런데저희동아리.mp3"
         juyoun "그래서 그런데... "
         extend "저희 동아리 \'해달\'에 가입할 생각 없어요?"
         juyoun "다양한 소모임과 "
