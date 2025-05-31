@@ -91,18 +91,22 @@ label start:
    
     play sound "audio/bgm/저는컴퓨터학부학생회장.mp3"
     juyoun "저는 컴퓨터학부 학생회장 3학년 박주연이에요."
+    play sound "audio/bgm/혹시이름이어떻게.mp3"
     juyoun "혹시 이름이 어떻게..."
     $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
     # $ na = Character( name , color="#ffffff")
     $ gyoungmin = Character(name, color="#c8ffc8")
     gyoungmin "앗.. 안녕하세요!"
     gyoungmin "저는 새로 입학하게 된 1학년 [name]입니다!"
-
+    
+    play sound "audio/bgm/후훗반가워요.mp3"
     juyoun "후훗, 반가워요."
+    play sound "audio/bgm/대강당까지안내.mp3"
     juyoun "대강당까지 안내해 줄게요."
 
     gyoungmin "(선배의 따듯한 손..)"
 
+    play sound "audio/bgm/앞으로선배와마주한다면.mp3"
     juyoun "앞으로 선배랑 마주하게 되면 가볍게 목례하는 거"
     extend "좋은 습관이 될 거에요."
     juyoun "저를 따라와요."
@@ -345,6 +349,7 @@ label start:
     label scene4_2:
         hyeonseo "4!"
         hyeonseo "하나"
+        play sound "audio/bgm/둘.mp3"
         juyoun "둘"
         parkjuyoung "셋"
         parkjuyoung "경민씨. "
@@ -355,12 +360,17 @@ label start:
         hide juyoun_standard
         hide hyeonseo_standard
         show juyoun_standard at center
+        play sound "audio/bgm/잠깐.mp3"
         juyoun "잠깐!" with vpunch
+        play sound "audio/bgm/술은자신의주량만큼만.mp3"
         juyoun "술은 자신의 주량만큼 먹는게 좋아요."
+        play sound "audio/bgm/경민씨많이취하신거.mp3"
         juyoun "경민씨 많이 취하신 거 같은데.."
+        play sound "audio/bgm/제가흑장미.mp3"
         juyoun "제가 흑장미 .."
         hide juyoun_standard
         show juyoun_love
+        play sound "audio/bgm/할게요.mp3"
         juyoun"할게요!!"
         gyoungmin "네..?"
         hide juyoun_love
@@ -369,6 +379,7 @@ label start:
                 gyoungmin "(얼굴만 이쁘신게 아니였구나 ..)"
                 show juyoun_shy
                 juyoun "(꿀꺽)"
+                play sound "audio/bgm/대신나중에소원.mp3"
                 juyoun "대신, "
                 extend "나중에 소원 들어주기에요?"
                 gyoungmin "ㄴ.."
@@ -383,6 +394,7 @@ label start:
                 gyoungmin "(힘들다..)"
         hide juyoun_love
         show juyoun_shy
+        play sound "audio/bgm/자다음게임으로넘어.mp3"
         juyoun "자.."
         extend "다음 게임으로 넘어갈까요?"
         hyeonseo "주연이가 좋아하는 ..."
@@ -397,9 +409,12 @@ label start:
         "경민아!!" with vpunch
         extend " 일어나봐 !"
         "선배, 경민이 술 많이 취한거 같은데요?"
+        play sound "audio/bgm/그러게요어떡하지.mp3"
         "그러게요.. 어떡하지"
         "일단 옮길까요?"
+        play sound "audio/bgm/네그래요.mp3"
         "네 그래요.."
+        play sound "audio/bgm/에구그러게적당히.mp3"
         "에구.. 그러게 적당히 마시지..."
         gyoungmin "그날.. 술을 너무 무리해서 마셨던 나는"
         gyoungmin "눈떠보니 기숙사 앞에 누워 있었다."
@@ -551,9 +566,12 @@ label start:
         play sound "audio/bgm/그래서그런데저희동아리.mp3"
         juyoun "그래서 그런데... "
         extend "저희 동아리 \'해달\'에 가입할 생각 없어요?"
+        play sound "audio/bgm/다양한소모임과.mp3"
         juyoun "다양한 소모임과 "
         extend "해커톤 등 이벤트가 많아요!"
+        play sound "audio/bgm/코딩을잘모르더라도.mp3"
         juyoun "코딩을 잘 모르더라도 C언어, 웹, 파이썬 부트캠프를 열어서.."
+        play sound "audio/bgm/열정만있다면.mp3"
         juyoun "열정!" with vpunch
         extend "만 있다면 누구든 할 수 있답니다~"
         gyoungmin "헉.. 어떡하지.."
@@ -591,15 +609,19 @@ label start:
         hyeonseo "아..안녕하세요!"
 
         show juyoun_standard at center
-
+        play sound "audio/bgm/안녕둘다동아리실은처음.mp3"
         juyoun "안녕~ "
         extend "둘다 동아리실은 처음이지?"
         hyeonseo "넵!!"
+        play sound "audio/bgm/반가워이렇게긴장할필요.mp3"
         juyoun "반가워, 후훗. "
         extend "그렇게 긴장할 필요 없어요~"
+        play sound "우선오늘은처음이니깐.mp3"
         juyoun "우선 오늘은 처음이니까 동아리 예절부터 알려줄게요."
+        play sound "audio/bgm/동아리예절첫째.mp3"
         juyoun "동아리 예절 첫째, "
         extend "동아리실에 들어오게 되면 누구든지 인사부터 하기. "
+        play sound "audio/bgm/둘째사용후.mp3"
         juyoun "둘째, "
         extend "사용 후 깨끗하게 정리하기!"
 
@@ -610,11 +632,14 @@ label start:
         juyoun "ㅎㅎㅎ"
         hide juyoun_standard
         show juyoun_love
+        play sound "audio/bgm/좋은생각인데요.mp3"
         juyoun "좋은 생각인데요?"
         hide juyoun_love
         show juyoun_standard
         gyoungmin "네, 명심할게요 !"
+        play sound "audio/bgm/규칙을더욱잘지키면.mp3"
         juyoun "규칙을 잘 지키면 더욱 재밌게 동아리 활동을 할 수 있답니다~"
+        play sound "audio/bgm/둘다동아리엠티.mp3"
         juyoun "앗, 혹시 둘다 동아리 MT 신청했나요?"
 
         menu:
@@ -766,11 +791,14 @@ label start:
 
 
         show juyoun_standard at center
+        play sound "audio/bgm/오늘재밌었어요.mp3"
         juyoun "오늘 재미있었어요?"
         gyoungmin "네 ! "
         extend "대학 로망을 하나 이룬거 같아요.."
+        play sound "audio/bgm/그래요다행이네.mp3"
         juyoun "그래요? "
         extend "다행이네..."
+        play sound "audio/bgm/그래서그런데.mp3"
         juyoun "그래서 그런데..."
 
         "왠지 모를 떨림이 느껴진다."
@@ -780,6 +808,7 @@ label start:
         hide juyoun_standard
         show juyoun_shy at center
         with hpunch
+        play sound "audio/bgm/내일오후에산책같이.mp3"
         juyoun "내일 오후에 산책, 같이 갈래요?"
 
         "그녀의 당황스러운 제안에"
@@ -854,7 +883,7 @@ label start:
         hide juyoun_shy
         #scene scene4 with dissolve
         show juyoun_standard at center
-
+        play sound "audio/bgm/여기해달선배들사이에서.mp3"
         juyoun "여기, 해달 선배들 사이에선 '고백 스팟'이라고 불려요."
         hide juyoun_standard
         show juyoun_standard at center
@@ -863,6 +892,7 @@ label start:
         gyoungmin "..ㄴ...네?..."
         hide juyoun_standard
         show juyoun_love
+        play sound "audio/bgm/아아직은아니고요.mp3"
         juyoun "아.. 아직은 아니고요. "
         extend "그냥.. 같이 있고 싶어서 불렀어요."
         gyoungmin "(선배 얼굴이 벚꽃보다 예쁘게 느껴진다...)"
@@ -883,11 +913,14 @@ label start:
         scene scene5_library with fade
         show juyoun_standard at center
 
+        play sound "audio/bgm/이거마시면서해요.mp3"
         juyoun "이거 마시면서 해요."
         "'선배가 준 에너지 드링크'를 획득했다."
+        play sound "audio/bgm/너무한번에달리면.mp3"
         juyoun "너무 한번에 달리면 탈나요. "
         extend "50분 공부하고 10분 휴식, 이게 효율 최고!"
         gyoungmin "선배도 밤새세요?"
+        play sound "audio/bgm/같이있으면덜피곤.mp3"
         juyoun "같이 있으면 덜 피곤하잖아요."
         jump scene5_menu
 
@@ -963,12 +996,15 @@ label start:
                     $minsu_love_num = minsu_love_num + 1
                 hide hyeonseo_standard
                 show juyoun_standard at center
+                play sound "audio/bgm/괜찮아요시험은이미.mp3"
                 juyoun "괜찮아요. 시험은 이미 끝났고, "
                 extend "아직 남은 프로젝트가 40\%에요."
+                play sound "audio/bgm/우리같이프로젝트나.mp3"
                 juyoun "우리 같이 프로젝트나 해볼까요?"
                 gyoungmin "정말요 ??"
                 hide juyoun_standard
                 show juyoun_love
+                play sound "audio/bgm/대신힘들어도포기금지.mp3"
                 juyoun "대신, "
                 extend "힘들어도 포기 금지!"
 
@@ -976,7 +1012,9 @@ label start:
     label scene7:
         scene scene7_night_haedalroom with fade 
         show juyoun_standard
+        play sound "audio/bgm/함수가자기자신을.mp3"
         juyoun "함수가 자기 자신을 호출 하는 것을"
+        play sound "audio/bgm/재귀함수라고불러요.mp3"
         juyoun "재귀 함수라고 불러요."
         juyoun "꼭 탈출 조건 붙여주기!"
         gyoungmin "조건문에 return;을 넣어주란 말인가요?"
