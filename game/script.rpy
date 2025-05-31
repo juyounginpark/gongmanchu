@@ -1048,6 +1048,7 @@ label start:
                 juyoun "헉.."
                 "말문이 막힌듯한 선배의 소리에.."
                 "잠시 침묵을 유지했다."
+                hide nightcalling
                 if juyoun_love_num==4 and juyoun_negai:
                     jump scene8_love
                 elif juyoun_love_num==4 and juyoun_negai==False:
@@ -1064,6 +1065,7 @@ label start:
                 gyoungmin "선배 줄곧 좋아했어요."
                 juyoun "고마워요.."
                 juyoun "날 좋아해줘서"
+                hide nightcalling
                 if juyoun_love_num==4 and juyoun_negai:
                     jump scene8_love
                 elif juyoun_love_num==4 and juyoun_negai==False:
@@ -1096,6 +1098,7 @@ label start:
                 gyoungmin "그 이상은 아니에요."
                 juyoun "네.."
                 extend "잘자요.. 이만 끊을게요.."
+                hide nightcalling
                 jump scene8_bad
 
 
@@ -1111,8 +1114,37 @@ label start:
         "대학원"
     label scene8_proffessorlove: 
         "민수엔딩"
+    
+    #호감도 MAX, 소원권X
     label scene8_bye:
-        "소원권X"
+        "…"
+        "시간은 빠르게 흐르고 "
+        "어느덧 "
+        scene scene1yard with fade
+        extend "헤어짐의 순간이 다가오고 있었다."
+
+        juyoun "여기."
+        extend " 기억나?"
+        gyoungmin "못할리가요."
+        gyoungmin "선배를 처음 만난 곳이잖아요."
+        juyoun "맞아."
+        juyoun "벌써 2년이나 지났네."
+
+        gyoungmin "그때, 동아리 들어온거."
+        gyoungmin "제가 대학에 와서 "
+        extend "가장 잘 한 선택이었던 것 같아요."
+        juyoun "흐흐.."
+        juyoun "나도 경민이 덕분에"
+        juyoun "더 열심히 할 수 있던 거 같아."
+
+        gyoungmin "선배.."
+        gyoungmin "졸업 "
+        extend "진심으로 축하드려요."
+        juyoun "고마워."
+        juyoun "나도.."
+        extend "멀리 있더라도"
+        juyoun "경민이 응원할게."
+        "END (2 / 4): 만남, 그리고 끝"
         
         #if jokbo:
         #족보를 썼을 때->시험 문제에 재대로 답 못함.
