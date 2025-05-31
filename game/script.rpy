@@ -210,8 +210,11 @@ label start:
         "혹시..."
         scene scene2bridge1 with vpunch
         show hyeonseo_standard
+        play sound "audio/bgm/Kyungpook National University 49.mp3"
         hyeonseo "혹시 컴퓨터학부 신입생인가요??"
+        play sound "audio/bgm/Kyungpook National University 50.mp3"
         hyeonseo "몇 살이에요? 저는 06년생이에요!!"
+        play sound "audio/bgm/Kyungpook National University 51.mp3"
         hyeonseo "잘해봐요! 신입생끼리!!"
         gyoungmin "아.."
         extend " 네.."
@@ -340,6 +343,7 @@ label start:
         gyoungmin "으아.."
         hide hyeonseo_standard
         show hyeonseo_standard at left
+        play sound "audio/bgm/Kyungpook National University 52.mp3"
         hyeonseo "술 "
         extend "마실 "
         extend "시간이 "
@@ -358,8 +362,10 @@ label start:
         juyoun "스타트!"
         hide juyoun_love
         show juyoun_standard at right
+        play sound "audio/bgm/Kyungpook National University 53.mp3"
         hyeonseo "저희... "
         hyeonseo "어!" with hpunch
+        play sound "audio/bgm/Kyungpook National University 54.mp3"
         hyeonseo "신난다. "
         extend "재미난다."
         hyeonseo "더! "
@@ -367,6 +373,7 @@ label start:
         extend "오브 "
         extend "데! "
         extend "스!" 
+        play sound "audio/bgm/Kyungpook National University 55.mp3"
         hyeonseo "[s_name]아, "
         extend "너가 원하는 사람을 지목하면 돼."
         gyoungmin "으.. "
@@ -379,6 +386,7 @@ label start:
     label scene1_4pick:
         menu:
             "이현서":
+                play sound "audio/bgm/Kyungpook National University 56.mp3"
                 hyeonseo "ㅠㅠ"
                 hyeonseo "진짜로?"
                 jump scene4_must
@@ -420,6 +428,7 @@ label start:
                 jump scene1_4pick
 
     label scene4_2:
+        play sound "audio/bgm/Kyungpook National University 57.mp3"
         hyeonseo "4!"
         hyeonseo "하나"
         play sound "audio/bgm/둘.mp3"
@@ -429,6 +438,7 @@ label start:
         play sound "audio/bgm/J6.mp3"
         parkjuyoung "[s_name]씨. "
         extend "마시세요 !"
+        play sound "audio/bgm/Kyungpook National University 58.mp3"
         hyeonseo "흐흐흐.."
         gyoungmin "(현서 자식.. 일부러 날 먹이려고 ...)"
         gyoungmin "넵..!!!"
@@ -475,6 +485,7 @@ label start:
         play sound "audio/bgm/자다음게임으로넘어.mp3"
         juyoun "자.."
         extend "다음 게임으로 넘어갈까요?"
+        play sound "audio/bgm/Kyungpook National University 59.mp3"
         hyeonseo "주연이가 좋아하는 ..."
         scene black with fade
         gyoungmin "아... "
@@ -601,6 +612,7 @@ label start:
         "(웅성웅성)"
         gyoungmin "뭐지?"
         show hyeonseo_standard
+        play sound "audio/bgm/Kyungpook National University 60.mp3"
         hyeonseo "동아리 가두모집 기간 아니야?"
         gyoungmin "아 동아리 가두모집 기간이구나."
         gyoungmin "(어떤 동아리가 나를 기다리려나 ...)"
@@ -608,8 +620,10 @@ label start:
         extend "저 사람은?"
         hide hyeonseo_standard
         show hyeonseo_happy
+        play sound "audio/bgm/Kyungpook National University 61.mp3"
         hyeonseo "맞지? "
         extend "주연 선배."
+        play sound "audio/bgm/Kyungpook National University 62.mp3"
         hyeonseo "그때 나랑 둘이서 너 챙기느라 엄청 고생했었어."
         gyoungmin "헐 그래? "
         extend "으아.. 어떡하지"
@@ -622,6 +636,7 @@ label start:
         gyoungmin "선배가 동아리 홍보도 하시는건가 ..."
         gyoungmin "근데 어떡하지... 그날 너무 민폐를 끼쳐서"
         gyoungmin "말 걸기 부끄러워..."
+        play sound "audio/bgm/Kyungpook National University 63.mp3"
         hyeonseo "뭐 어때?"
         hyeonseo "한번 말 걸어봐 !"
         menu:
@@ -665,6 +680,7 @@ label start:
         menu:
             "가입한다":
                 juyoun "후훗, 동아리 예절도 많이 알려줄게요."
+                play sound "audio/bgm/Kyungpook National University 64.mp3"
                 hyeonseo "그럼 저도 가입할래요!"
                 "그렇게 나는 내 친구 현서와 함께 동아리에 가입하게 되었다."
                 jump scene3_1
@@ -695,12 +711,14 @@ label start:
         scene scene3_1_haedalroom with fade
         
         "(동아리실에 들어가며) "
+        play sound "audio/bgm/Kyungpook National University 65.mp3"
         hyeonseo "아..안녕하세요!"
 
         show juyoun_standard at center
         play sound "audio/bgm/안녕둘다동아리실은처음.mp3"
         juyoun "안녕~ "
         extend "둘다 동아리실은 처음이지?"
+        play sound "audio/bgm/Kyungpook National University 66.mp3"
         hyeonseo "넵!!"
         play sound "audio/bgm/반가워이렇게긴장할필요.mp3"
         juyoun "반가워, 후훗. "
@@ -716,7 +734,7 @@ label start:
 
         show hyeonseo_standard at left 
         with easeinleft
-        
+        play sound "audio/bgm/Kyungpook National University 67.mp3"
         hyeonseo "셋째, 동아리실에서 몰래 게임하다 걸리면 벌금 천원 ~"
         juyoun "ㅎㅎㅎ"
         hide juyoun_standard
@@ -970,6 +988,7 @@ label start:
         gyoungmin "(머리를 싸매며) "
         extend "으... 살려 줘..."
         hyeonseo "(진동)" with vpunch
+        play sound "audio/bgm/Kyungpook National University 68.mp3"
         hyeonseo "1교시 출석 대신 해줄까?"
 
         menu:
@@ -1106,6 +1125,7 @@ label start:
                     "(웅성웅성)"
                     gyoungmin "헉.. 전부 처음보는 유형이었어..."
                     show hyeonseo_standard
+                    play sound "audio/bgm/Kyungpook National University 69.mp3"
                     hyeonseo "작년 족보 쓸모 없네. "
                     extend "수업이나 열심히 들을걸.."
                 else:
@@ -1115,6 +1135,7 @@ label start:
                     "(웅성웅성)"
                     gyoungmin "시험... 망쳐버렸다..."
                     show hyeonseo_standard
+                    play sound "audio/bgm/Kyungpook National University 70.mp3"
                     hyeonseo "너도? 나도..."
                     gyoungmin "그래도... 준비한건 다 풀었더니 후련하다."
                     $minsu_love_num = minsu_love_num + 1
@@ -1171,19 +1192,25 @@ label start:
         gyoungmin "(내 마음을 들킬뻔 했어..)"
         gyoungmin "(어떡하지 어떡하지)"
         show minsu_standard
+        play sound "audio/bgm/Kyungpook National University 20.mp3"
         minsu "[s_name]군,"
         extend " 아직도 공부중인거예요?"
         gyoungmin "앗, 넵 교수님."
+        play sound "audio/bgm/Kyungpook National University 21.mp3"
         minsu "밤새느라 고생많네요."
         gyoungmin "하하.."
         gyoungmin "(교수님.. 때문이잖아요..)"
+        play sound "audio/bgm/Kyungpook National University 22.mp3"
         minsu "음.. "
         extend "혹시.."
+        play sound "audio/bgm/Kyungpook National University 23.mp3"
         minsu "경민군만 괜찮다면 "
         extend "내일 같이 커피 마실래요..?"
+        play sound "audio/bgm/Kyungpook National University 24.mp3"
         minsu "물론 내가 살게요."
         gyoungmin "네... "
         extend "네???" with vpunch
+        play sound "audio/bgm/Kyungpook National University 25.mp3"
         minsu "별건 아니고 이번 중간고사.. "
         extend "굉장히 잘 쳤길래."
         "왠지 모를 쑥스러움이 그의 얼굴에서 느껴진다."
@@ -1192,6 +1219,7 @@ label start:
             "선배와 약속이 있어서요.":
                 gyoungmin "저 주연선배와 약속이 있어서요."
                 gyoungmin "다음에 뵈어도 될까요?"
+                play sound "audio/bgm/Kyungpook National University 26.mp3"
                 minsu "아쉽네요"
                 minsu "알겠어요."
                 minsu "내가 [s_name]군 항상 응원해 ~"
@@ -1201,6 +1229,7 @@ label start:
                 $ juyoun_arr[3] = False
                 $ juyoun_arr[3] = True
             "언제가 좋을까요? 언제든 좋아요.":
+                play sound "audio/bgm/Kyungpook National University 27.mp3"
                 minsu "그래요?"
                 minsu "[s_name]씨 그럴줄 같았어요."
                 minsu "그럼 내일 보는거에요?"
