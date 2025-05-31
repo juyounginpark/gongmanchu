@@ -340,10 +340,14 @@ label start:
                 jump scene4_must
             "박주영":
                 show parkjuyoung_stadard
+                play sound "audio/bgm/J1.mp3"
                 parkjuyoung "어이.."
                 extend "갑자기 나를 왜 부른건가.."
+                play sound "audio/bgm/J2.mp3"
                 parkjuyoung "뭐..? 나보고 술을 마시라고 한건가??!!"
+                play sound "audio/bgm/J3.mp3"
                 parkjuyoung "할 수 없군..."
+                play sound "audio/bgm/J4.mp3"
                 parkjuyoung "<개발자의 "
                 extend "권한>" with vpunch
                 "당신은 <개발자의 권한>으로 인해 AURA가 9999999만큼 감소했습니다.."
@@ -369,7 +373,9 @@ label start:
         hyeonseo "하나"
         play sound "audio/bgm/둘.mp3"
         juyoun "둘"
+        play sound "audio/bgm/J5.mp3"
         parkjuyoung "셋"
+        play sound "audio/bgm/J6.mp3"
         parkjuyoung "경민씨. "
         extend "마시세요 !"
         hyeonseo "흐흐흐.."
@@ -451,7 +457,9 @@ label start:
         gyoungmin "아, 교수님 오신다."
         hide gyoungmin_standard
         show minsu_standard
+        play sound "audio/bgm/M1.mp3"
         minsu "Good morning. 컴퓨터학개론 강의를 맡은 ‘김민수’입니다."
+        play sound "audio/bgm/M2.mp3"
         minsu "결석은 세 번만 넘겨도 F니 모두 조심하도록."
         gyoungmin "교수님.. 생각보다 되게 젊으시잖아?"
         gyoungmin "결석 안하도록 조심해야겠다..."
@@ -515,10 +523,14 @@ label start:
     label scene2_reply:
         gyoungmin "앗.." with vpunch
         gyoungmin "바로 답장이?"
+        play sound "audio/bgm/M3.mp3"
         minsu "서경민 학생, 확인했습니다."
+        play sound "audio/bgm/M4.mp3"
         minsu "몸조리 잘하고 다음 수업에서 뵙도록 하지요."
+        play sound "audio/bgm/M5.mp3"
         minsu "그나저나.. "
         extend "이메일 매너가 출중하더군요."
+        play sound "audio/bgm/M6.mp3"
         minsu "별건 아니지만 "
         extend "커피 한 잔 하도록 해요."
         gyoungmin "헙.. 커피 기프티콘까지.."
