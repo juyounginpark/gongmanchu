@@ -20,6 +20,7 @@ image scene7_night_gigsa = "scene7_night_gigsa.jpg"
 image scene2_classroom = "scene2_classroom.jpg"
 image nightcall = "nightcall.png"
 image nightcalling = "nightcalling.png"
+image service_1 = "service_1.png"
 
 # 캐릭터
 image juyoun_standard = "juyoun_standard.png"
@@ -72,7 +73,7 @@ label start:
     play music "audio/bgm/mainbgm.mp3"
     scene scene1yard with fade
     #1. 입학식에서 처음 만난 선배
-    show gyoungmin_standard at center 
+    # show gyoungmin_standard at center 
     "여기가 한국대학교..?"
     "엄청 넓다.."
     "앗, 입학식 시간이 곧이잖아?"
@@ -126,7 +127,7 @@ label start:
             juyoun "잠깐이었지만 만나서 즐거웠어요..!! 그럼 다음에 또 봬요..!"
             hide juyoun_sad
             with dissolve
-            show gyoungmin_standard at center
+            # show gyoungmin_standard at center
             gyoungmin "정말이지... 여자들이란... 나를 가만 못 둬서 문제라니까.."
             jump badend1
 
@@ -135,7 +136,7 @@ label start:
         hide gyoungmin_standard
         scene black 
         "(10년 후)"
-        show gyoungmin_standard at center
+        # show gyoungmin_standard at center
         gyoungmin "나는 대학시절 내내 화장실에서 밥을 먹었다."
         gyoungmin "만약 그때 그 선배를 따라갔다면 달라졌을까..?"
         hide gyoungmin_standard
@@ -237,7 +238,8 @@ label start:
     label minju_bad:
         scene suljari with fade
         show juyoun_standard  
-        juyoun ""
+        juyoun "[s_name]씨..."
+
 
 
     
@@ -396,7 +398,7 @@ label start:
     #scene2. 첫 수업
     label scene2:
         scene scene2_classroom with fade
-        show gyoungmin_standard at center
+        # show gyoungmin_standard at center
         gyoungmin "으아... 첫 수업이라니"
         gyoungmin "긴장되서 울렁거려.."
         gyoungmin "아, 교수님 오신다."
@@ -778,18 +780,31 @@ label start:
                 jump scene4
 
             "지금도 걷고 싶은데요.":
-                juyoun "흐흐 "
-                extend "정말요?"
-                hide juyoun_standard
-                show juyoun_shy
-                juyoun "이거 의외네.."
-                hide juyoun_shy
-                show juyoun_love
-                juyoun "그럼 내일 보는 거에요?"
-                hide juyoun_love
-                scene black with fade
-                "그렇게 해달 MT는 정신없이 끝났다."
-                "어쩌면.. 좋은 추억이 될지도..?"
+                if juyoun_love_num == 2 :
+                    hide juyoun_standard
+                    hide juyoun_shy
+                    scene service_1 with fade
+                    juyoun "흐흐 "
+                    extend "정말요?"
+                    juyoun "이거 의외네.."
+                    juyoun "그럼 내일 보는 거에요?"
+                    scene black with fade
+                    "그렇게 해달 MT는 정신없이 끝났다."
+                    "어쩌면.. 좋은 추억이 될지도..?"
+                else :
+                    juyoun "흐흐 "
+                    extend "정말요?"
+                    hide juyoun_standard
+                    show juyoun_shy
+                    juyoun "이거 의외네.."
+                    hide juyoun_shy
+                    show juyoun_love
+                    juyoun "그럼 내일 보는 거에요?"
+                    hide juyoun_love
+                    scene black with fade
+                    "그렇게 해달 MT는 정신없이 끝났다."
+                    "어쩌면.. 좋은 추억이 될지도..?"
+
                 jump scene4
 
    
