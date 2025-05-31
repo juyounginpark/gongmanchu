@@ -108,7 +108,9 @@ label start:
 
     play sound "audio/bgm/앞으로선배와마주한다면.mp3"
     juyoun "앞으로 선배랑 마주하게 되면 가볍게 목례하는 거"
-    extend "좋은 습관이 될 거에요."
+    play sound "audio/bgm/좋은습관이될거에요.mp3"
+    juyoun "좋은 습관이 될 거에요."
+    play sound "audio/bgm/저를따라와요.mp3"
     juyoun "저를 따라와요."
 
     show juyoun_standard at center
@@ -1016,22 +1018,29 @@ label start:
         juyoun "함수가 자기 자신을 호출 하는 것을"
         play sound "audio/bgm/재귀함수라고불러요.mp3"
         juyoun "재귀 함수라고 불러요."
+        play sound "audio/bgm/꼭탈출조건.mp3"
         juyoun "꼭 탈출 조건 붙여주기!"
         gyoungmin "조건문에 return;을 넣어주란 말인가요?"
+        play sound "audio/bgm/네바로그거에요.mp3"
         juyoun "네! 바로 그거에요."
         gyoungmin "선배가 알려주니깐..."
         extend "더 이해가 잘되는데요..?"
+        play sound "audio/bgm/흐흐그래요.mp3"
         juyoun "흐흐.. 그래요?"
+        
         hide juyoun_standard
         show juyoun_love
+        play sound "audio/bgm/그럼다행이에요.mp3"
         juyoun "그럼 다행이에요"
         hide juyoun_love
         show juyoun_love
         gyoungmin "선배.. 그런데..."
+        play sound "audio/bgm/네물음표.mp3"
         juyoun "네?"
         gyoungmin "아!"with hpunch
         extend "아니에요!!!" with hpunch
         gyoungmin "잠깐 저 화장실 좀 갔다올게요!!"
+        play sound "audio/bgm/흐흐그래요갔다와요.mp3"
         juyoun "크크크"
         extend "그래요. 갔다와요."
         hide juyoun
@@ -1092,14 +1101,18 @@ label start:
                 "딸깍."
         hide nightcall
         show nightcalling
+        play sound "audio/bgm/경민이니.mp3"
         juyoun "경민"
         extend "이니..?"        
         "그녀의 반쯤 잠긴 목소리가 "
         extend "수화기 너머로 들려왔다."
         gyoungmin "네 선배 .."
         extend "무슨 일이세요?"
+        play sound "audio/bgm/미안해요.mp3"
         juyoun "...미안해요"
+        play sound "audio/bgm/자꾸경민이웃는게.mp3"
         juyoun "자꾸 경민이 웃는게 생각나서.."
+        play sound "audio/bgm/자는중이었죠.mp3"
         juyoun "자는 중이었죠?"
         "창가 사이로 달빛이 새어든다."
         menu:
