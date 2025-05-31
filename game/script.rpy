@@ -1549,38 +1549,42 @@ label start:
         scene scene7_bokdo with fade
         "..몇달 후 캠퍼스 복도"
         show hyeonseo_standard at center
+        play sound "audio/bgm/Kyungpook National University 71.mp3"
         hyeonseo "경민아 !!"
         gyoungmin "어, 현서야. 오랜만이다."
-
+        play sound "audio/bgm/Kyungpook National University 72.mp3"
         hyeonseo "한동안 어디 숨었냐 ~ 도서관에서 잠이라도 잤냐?"
 
         gyoungmin "뭐.. 학점이 전부잖아. 도망치듯 공부 중이지."
 
         "(진동)" with vpunch ############## 진동 효과음
-
+        play sound "audio/bgm/Kyungpook National University 73.mp3"
         hyeonseo "아, 잠깐만. "
         hyeonseo "자기야 ~ 어, 지금 학교야."
         "(...)"
-
+        play sound "audio/bgm/Kyungpook National University 74.mp3"
         hyeonseo "앗 미안, 끊었어!"
         gyoungmin "너 여자친구도 있어?"
-        
+        play sound "audio/bgm/Kyungpook National University 75.mp3"
         hyeonseo "응! 얼마 안 됐는데, 드디어 사귀게 됐어."
 
         gyoungmin "누군데? 너한텐 아까운 사람 아냐?"
-
+        play sound "audio/bgm/Kyungpook National University 76.mp3"
         hyeonseo "너도 아는 사람이야."
+        play sound "audio/bgm/Kyungpook National University 77.mp3"
         hyeonseo "주연 선배."
 
         gyoungmin "..."
         gyoungmin "..."
         gyoungmin "정말?"
 
+        play sound "audio/bgm/Kyungpook National University 78.mp3"
         hyeonseo "어. 내가 몇 번이고 고백했더니 결국 받아줬어."
+        play sound "audio/bgm/Kyungpook National University 79.mp3"
         hyeonseo "믿기지 않지? 내가 주연 선배랑 연애라니."
 
         gyoungmin "...축하해."
-
+        play sound "audio/bgm/Kyungpook National University 80.mp3"
         hyeonseo "어, 저기 온다! "
         extend "나 먼저 갈게!"
         hide hyeonseo_standard
@@ -1597,45 +1601,50 @@ label start:
         ####### 암흑
         "(... 똑똑)"
         gyoungmin "교수님, 저.. 서경민입니다."
+        play sound "audio/bgm/Kyungpook National University 28.mp3"
         minsu "어서 와요. 들어오세요."
         ####### 교수실
         scene scene9_c_labroom with fade
         show minsu_standard at center
+        play sound "audio/bgm/Kyungpook National University 29.mp3"
         minsu "거기 앉아서 조금만 기다려요. "
         extend "정리할게 있어서요."
         gyoungmin "(교수님의 집중하는 모습.. 왠지 색다르게 보인다.)"
         gyoungmin "(이상하게... 멋있어.)"
-
+        play sound "audio/bgm/Kyungpook National University 30.mp3"
         minsu "기다리게 해서 미안해요."
         gyoungmin "아뇨 !" with vpunch
         gyoungmin "전혀요 !" with vpunch
+        play sound "audio/bgm/Kyungpook National University 31.mp3"
         minsu "하하"
+        play sound "audio/bgm/Kyungpook National University 32.mp3"
         minsu "너무 긴장하지 말아요. "
         extend "학점이 걸린 상담은 아니니까."
         gyoungmin "네.. 감사합니다."
+        play sound "audio/bgm/Kyungpook National University 33.mp3"
         minsu "어제 느꼈어요."
         minsu "경민 학생이 발표 준비하던 모습, 진지한 눈빛…"
         gyoungmin "..."
+        play sound "audio/bgm/Kyungpook National University 34.mp3"
         minsu "학생으로서의 ‘본업’에 열중하는 모습이…"
         minsu "저한텐 오히려 떨림을 줬어요."
 
         gyoungmin "왠지.. 교수님이 평소보다 어리게 느껴진다."
-
+        play sound "audio/bgm/Kyungpook National University 35.mp3"
         minsu "여기.."
         #########조교 지원서
         minsu "조교 지원서에요."
 
         gyoungmin "..."
         gyoungmin "네?"
-        
+        play sound "audio/bgm/Kyungpook National University 36.mp3"
         minsu "좀 더 가까이서 나랑 일해보지 않을래요?"
-        minsu "잘 읽어보고.."
-        minsu "서명해주세요."
-
+       
+        play sound "audio/bgm/Kyungpook National University 37.mp3"
         minsu "대신.. 그 아래에 서명하면"
         minsu "첫 출근 전날에 같이 영화봐요."
         gyoungmin "영화요…?"
-
+        play sound "audio/bgm/Kyungpook National University 38.mp3"
         minsu "후훗. 때로는 인생에 변수가 있는 게 더욱 재밌죠."
 
         gyoungmin "... "
@@ -1647,6 +1656,7 @@ label start:
     label scene8_proffessorlove:
         scene black with fade
         gyoungmin "교수님, 저 서경민입니다."
+        play sound "audio/bgm/Kyungpook National University 39.mp3"
         minsu "응, 들어와요."
         minsu "조금만 기다려줘요. 금방 정리할게요."
 
@@ -1654,39 +1664,47 @@ label start:
         show minsu_standard at center
         gyoungmin "어제도 그랬지만… "
         extend "교수님만 보면 지금도 심장이 뛰어."
-
+        play sound "audio/bgm/Kyungpook National University 40.mp3"
         minsu "기다리게 해서 미안해요. 이런 건 제가 먼저 준비하고 있어야 했는데."
         gyoungmin "괜찮아요."
 
         gyoungmin "오히려… 교수님이 본업에 집중하시는 모습,"
         
         gyoungmin "잠깐이라도 볼 수 있어서 좋았어요."
-
+        play sound "audio/bgm/Kyungpook National University 41.mp3"
         minsu "그 말, 고맙네요."
         minsu "근데… 요즘 자주 생각했어요."
+        play sound "audio/bgm/Kyungpook National University 42.mp3"
         minsu "경민 씨가 열중하는 모습을 보고, "
         extend "나도 뭔가를 다시 시작하고 싶다고."
 
         gyoungmin "....그게 무슨 말씀이세요?"
+        play sound "audio/bgm/Kyungpook National University 43.mp3"
         minsu "모르겠어요."
         extend "학생이라는 울타리 안에서만 보려 했는데,"
+       
         minsu "어느 순간부터... 그냥 한 사람으로 보이더라고요."
 
         gyoungmin "...저도, 교수님ㅇ 그냥 '교수님'이 아닌 순간이 있었어요."
+        play sound "audio/bgm/Kyungpook National University 44.mp3"
         minsu "그래요?"
         gyoungmin "처음에는 존경이었고..."
         extend "그 다음엔 동경이었고..."
         extend "지금은, 감히 이름조차 쉽게 부를 수 없을 만큼... 조심스러운 감정이에요."
+        play sound "audio/bgm/Kyungpook National University 45.mp3"
         minsu "...그 조심스러움, 저도 같아요"
+        play sound "audio/bgm/Kyungpook National University 46.mp3"
         minsu "그래서 선을 긋는 것도, 넘는 것도 조심스러워요"
         extend "하지만... 이런 건 분명하죠."
 
         gyoungmin "어떤 건가요?"
+        play sound "audio/bgm/Kyungpook National University 47.mp3"
         minsu "당신의 진심이, 내 하루를 흔들었다는 것."
         
         gyoungmin "...그럼, 저도 말할 수 있어요."
         gyoungmin "교수님이 제 마음에 들어왔다는 건"
         extend "제 스스로도 어쩔 수 없다는 것."
+        play sound "audio/bgm/Kyungpook National University 48.mp3"
         minsu "지금은... 이 마음을 천천히 알아가도 괜찮을까요?"
         gyoungmin "...네 저도 지금, 그렇게 생각했어요."
         gyoungmin "(왜인지 내 앞에는 교수 김민수가 아닌,)"
