@@ -211,9 +211,7 @@ label start:
         "혹시..."
         scene scene2bridge1 with vpunch
         show hyeonseo_standard
-        play sound "audio/bgm/Kyungpook National University 49.mp3"
-        hyeonseo "혹시 컴퓨터학부 신입생인가요??"
-        play sound "audio/bgm/Kyungpook National University 50.mp3"
+        hyeonseo "컴퓨터학부 신입생인가요??"
         hyeonseo "몇 살이에요? 저는 06년생이에요!!"
         play sound "audio/bgm/Kyungpook National University 51.mp3"
         hyeonseo "잘해봐요! 신입생끼리!!"
