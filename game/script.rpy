@@ -237,8 +237,11 @@ label start:
         extend "안 마셔?"
     menu:
         "마셔!":
+            play sound "audio/bgm/마셔1.mp3"
             juyoun "흐흐흐.. 진짜로요?"
+            play sound "audio/bgm/마셔2.mp3"
             juyoun "좋아요."
+            play sound "audio/bgm/마셔3.mp3"
             extend "이제 눈 떠봐요."
             jump scene1_4
 
@@ -1166,10 +1169,13 @@ label start:
                 gyoungmin "선배, 저는 아직 잘 모르겠어요."
                 gyoungmin "이만 자러 갈게요. "
                 extend "선배도 안녕히 주무세요."
+                play sound "audio/bgm/몰루1.mp3"
                 juyoun "정말..."
+                play sound "audio/bgm/몰루2.mp3"
                 juyoun "정말로요..?"
                 gyoungmin "물론 선배가 좋은 사람이긴하지만.."
                 gyoungmin "그 이상은 아니에요."
+                play sound "audio/bgm/몰루3.mp3"
                 juyoun "네.."
                 extend "잘자요.. 이만 끊을게요.."
                 hide nightcalling
