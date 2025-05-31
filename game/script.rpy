@@ -1433,7 +1433,7 @@ label start:
             "당연하지.":
                 # 놀란표정
                 gyoungmin "나도... 누나와 함께라면"
-                gyoungmin "이 길이 더 이상 두렵지 않아."-
+                gyoungmin "이 길이 더 이상 두렵지 않아."
 
                 #눈 시울이 붉어지며
                 play sound "audio/bgm/8(20).mp3"
