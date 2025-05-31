@@ -146,10 +146,12 @@ label start:
     juyoun "저는 컴퓨터학부 학생회장 3학년 박주연이에요."
     play sound "audio/bgm/혹시이름이어떻게.mp3"
     juyoun "혹시 이름이 어떻게..."
-    $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
-    if len(name) > 2:
-        $ s_name = name[1:3]
+    # $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
+    # if len(name) > 2:
+    #     $ s_name = name[1:3]
     # $ na = Character( name , color="#ffffff")
+    $ name = "서경민"
+    $ s_name = "경민"
     $ gyoungmin = Character(name, color="#c8ffc8")
     gyoungmin "앗.. 안녕하세요!"
     gyoungmin "저는 새로 입학하게 된 1학년 [name]입니다!"
@@ -482,7 +484,7 @@ label start:
                 gyoungmin "네.."
                 gyoungmin "(힘들다..)"
         hide juyoun_love
-        show juyoun_shy
+        # show juyoun_shy
         play sound "audio/bgm/자다음게임으로넘어.mp3"
         juyoun "자.."
         extend "다음 게임으로 넘어갈까요?"
@@ -511,6 +513,10 @@ label start:
         gyoungmin "너무 부끄러운 나머지.."
         gyoungmin "개강 전까지 집에만 박혀 후회하고 "
         extend "또 후회했다."
+        hide juyoun_standard
+        hide juyoun_shy
+        hide juyoun_sad
+        hide juyoun_love
         jump scene2
 
     #scene2. 첫 수업
@@ -1358,6 +1364,7 @@ label start:
         extend "헤어짐의 순간이 다가오고 있었다."
 
         scene scene1yard with fade
+        show juyoun_standard at center
         play sound "audio/bgm/8(1).mp3"
         juyoun "여기."
         extend " 기억나?"
@@ -1390,11 +1397,15 @@ label start:
         play sound "audio/bgm/8(8).mp3"
         juyoun "...그럼 이제 가볼게."
         gyoungmin "..네 선배"
+        hide juyoun_standard
+        scene black with fade
         #암흑
 
         "..."
         "..."
         play sound "audio/bgm/8(9).mp3"
+        scene scene1yard with fade
+        show juyoun_standard at center
         "경민아...!!!" with vpunch
         gyoungmin "ㄴ..네?"
         play sound "audio/bgm/8(10).mp3"
@@ -1439,6 +1450,8 @@ label start:
                 gyoungmin "이 길이 더 이상 두렵지 않아."
 
                 #눈 시울이 붉어지며
+                hide juyoun_standard
+                show juyoun_sad at center
                 play sound "audio/bgm/8(20).mp3"
                 juyoun "경민아… 좋아해."
                 play sound "audio/bgm/8(21).mp3"
@@ -1458,6 +1471,7 @@ label start:
         extend "헤어짐의 순간이 다가오고 있었다."
 
         scene scene1yard with fade
+        show juyoun_standard at center
         play sound "audio/bgm/8(1).mp3" 
         juyoun "여기."
         extend " 기억나?"
@@ -1503,6 +1517,8 @@ label start:
 
         gyoungmin "..네, 선배."
 
+        hide juyoun_standard
+        scene black with fade
         #암흑
         play sound "audio/bgm/nm8(10).mp3"
         juyoun "잘 지내... 경민아"
@@ -1703,6 +1719,7 @@ label start:
         scene scene1yard with fade
         extend "헤어짐의 순간이 다가오고 있었다."
 
+        show juyoun_standard at center
         juyoun "여기."
         extend " 기억나?"
         gyoungmin "못할리가요."
