@@ -146,10 +146,12 @@ label start:
     juyoun "저는 컴퓨터학부 학생회장 3학년 박주연이에요."
     play sound "audio/bgm/혹시이름이어떻게.mp3"
     juyoun "혹시 이름이 어떻게..."
-    $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
-    if len(name) > 2:
-        $ s_name = name[1:3]
+    # $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
+    # if len(name) > 2:
+    #     $ s_name = name[1:3]
     # $ na = Character( name , color="#ffffff")
+    $ name = "서경민"
+    $ s_name = "경민"
     $ gyoungmin = Character(name, color="#c8ffc8")
     gyoungmin "앗.. 안녕하세요!"
     gyoungmin "저는 새로 입학하게 된 1학년 [name]입니다!"
