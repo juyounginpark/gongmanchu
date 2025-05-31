@@ -484,7 +484,7 @@ label start:
                 gyoungmin "네.."
                 gyoungmin "(힘들다..)"
         hide juyoun_love
-        show juyoun_shy
+        # show juyoun_shy
         play sound "audio/bgm/자다음게임으로넘어.mp3"
         juyoun "자.."
         extend "다음 게임으로 넘어갈까요?"
@@ -513,6 +513,10 @@ label start:
         gyoungmin "너무 부끄러운 나머지.."
         gyoungmin "개강 전까지 집에만 박혀 후회하고 "
         extend "또 후회했다."
+        hide juyoun_standard
+        hide juyoun_shy
+        hide juyoun_sad
+        hide juyoun_love
         jump scene2
 
     #scene2. 첫 수업
