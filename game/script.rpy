@@ -126,22 +126,18 @@ label start:
 
     play music "audio/bgm/mainbgm.mp3"
     scene scene1yard with fade
-    #1. 입학식에서 처음 만난 선배
-    # show gyoungmin_standard at center 
+    #S1. 입학식에서 처음 만난 그 선배
     "여기가 한국대학교..?"
     "엄청 넓다.."
     "앗, 입학식 시간이 곧이잖아?"
-    hide gyoungmin_standard
     
-    show juyoun_shy at center
+    show juyoun_standard at center
     with easeinright
     with vpunch
     juyoun "혹시 컴퓨터학부 신입생인가요?"
 
     "아.. "
     extend "넵!!"
-    hide juyoun_shy
-    show juyoun_standard at center
     "(우와.. 예쁘다)"
    
 
@@ -160,11 +156,9 @@ label start:
 
     gyoungmin "(선배의 따듯한 손..)"
 
-    juyoun "앞으로 선배랑 마주하게 되면 가볍게 목례하는 거"
+    juyoun "앞으로 선배랑 마주하게 되면 가볍게 목례하는 거,"
     extend "좋은 습관이 될 거에요."
     juyoun "저를 따라와요."
-
-    show juyoun_standard at center
     menu:
         "선배를 따라간다.":
             gyoungmin "잘 부탁드립니다..!!"
@@ -181,25 +175,21 @@ label start:
             juyoun "잠깐이었지만 만나서 즐거웠어요..!! 그럼 다음에 또 봬요..!"
             hide juyoun_sad
             with dissolve
-            # show gyoungmin_standard at center
             gyoungmin "정말이지... 여자들이란... 나를 가만 못 둬서 문제라니까.."
             jump badend1
 
+    #E1, 배드 엔딩 1
     label badend1:
         stop music fadeout 5.0
-        hide gyoungmin_standard
         scene black 
         "(10년 후)"
-        # show gyoungmin_standard at center
         gyoungmin "나는 대학시절 내내 화장실에서 밥을 먹었다."
         gyoungmin "만약 그때 그 선배를 따라갔다면 달라졌을까..?"
-        hide gyoungmin_standard
         "BAD END 1: 별볼일 없는 엔딩"
         return
 
-    #1_1, 입학식 브릿지
+    #S_1, 입학식 브릿지
     label scene1_1:
-        hide gyoungmin_standard
         scene scene2bridge1
         bridge1 "우리 한국대학교에 입학하게 되신 여러분 진심으로 환영합니다."
         bridge1 "우리 한국대학교는 예로부터..."
@@ -207,21 +197,22 @@ label start:
         gyoungmin "(빨리 끝나라...)"
 
         scene black with fade
-        gyoungmin "Zzzz.........."
+        gyoungmin "Zzz.........."
         "저기요?"
         "혹시..."
         scene scene2bridge1 with vpunch
         show hyeonseo_standard
-        hyeonseo "혹시 컴퓨터학부 신입생인가요??"
+        hyeonseo "컴퓨터학부 신입생인가요??"
         hyeonseo "몇 살이에요? 저는 06년생이에요!!"
         hyeonseo "잘해봐요! 신입생끼리!!"
         gyoungmin "아.."
         extend " 네.."
-        gyoungmin "(아 피곤하다..)"
+        gyoungmin "(좋은 친구같다..)"
+        gyoungmin "(그치만 기빨려..)"
         hide hyeonseo_standard
         jump scene1_2
 
-    #1-2 브릿지
+    #S1_2 입학식 후 브릿지
     label scene1_2: 
         scene night_college
         show juyoun_standard with fade
@@ -231,7 +222,7 @@ label start:
         juyoun "정말 자랑스럽지 않나요?"
         hide juyoun_shy
         show juyoun_standard
-        juyoun "저 고등학교 때 한국대학교 정말 오고 싶었거든요."
+        juyoun "저 고등학교 때 한국대학교에 정말 오고 싶었거든요."
         juyoun "앗..! 저 너무 말이 길었죠.. 끝나고 신입생 뒷풀이 하는데"
         juyoun "오라는 말을 하려 했었어요"
     menu:
@@ -239,7 +230,6 @@ label start:
             jump bridge_soju 
 
     label bridge_soju:
-        gyoungmin "좋아요!"
         hide juyoun_standard
         show juyoun_love
         juyoun "(웃음)"
@@ -291,8 +281,10 @@ label start:
 
     label minju_bad:
         scene suljari with fade
-        show juyoun_standard  
-        juyoun "[s_name]씨..."
+        show hyeonseo_standard at center
+        hyeonseo "이 게임! " with vpunch
+        extend "누가 했어!!" with vpunch
+        hide hyeonseo_standard
 
 
 
@@ -454,7 +446,6 @@ label start:
     #scene2. 첫 수업
     label scene2:
         scene scene2_classroom with fade
-        # show gyoungmin_standard at center
         gyoungmin "으아... 첫 수업이라니"
         gyoungmin "긴장되서 울렁거려.."
         gyoungmin "아, 교수님 오신다."
@@ -842,7 +833,7 @@ label start:
                 jump scene4
 
             "지금도 걷고 싶은데요.":
-                if juyoun_love_num == 2 :
+                if juyoun_arr.count(True) == 2 :
                     hide juyoun_standard
                     hide juyoun_shy
                     scene service_1 with fade
@@ -986,8 +977,8 @@ label start:
                 juyoun "아마 태블릿에 있을건데.."
                 juyoun "이따 확인하고 보내줄게요."
                 gyoungmin "감사합니다 !"
-                juyoun "근데 족보는 참고용이니까 "
-                extend "너무 의존하지는 마세요."
+                juyoun "물론 족보는 참고용이니"
+                juyoun "너무 의존하지는 마세요."
                 gyoungmin "넵!!"
                 "'컴퓨터학개론 족보'를 획득했다."
                 $jbo = True
@@ -1040,7 +1031,7 @@ label start:
         scene scene7_night_haedalroom with fade 
         show juyoun_standard
         juyoun "함수가 자기 자신을 호출 하는 것을"
-        juyoun "재귀 함수라고 불러요."
+        extend "재귀 함수라고 불러요."
         juyoun "꼭 탈출 조건 붙여주기!"
         gyoungmin "조건문에 return;을 넣어주란 말인가요?"
         juyoun "네! 바로 그거에요."
@@ -1068,19 +1059,25 @@ label start:
         extend " 아직도 공부중인거예요?"
         gyoungmin "앗, 넵 교수님."
         minsu "밤새느라 고생많네요."
-        minsu "혹시 내일 나랑 둘이 커피챗 할 생각 없나요... "
-        extend "?"
-        minsu "이번 중간고사.. 굉장히 잘 쳤길래."
+        gyoungmin "하하.."
+        gyoungmin "(교수님.. 때문이잖아요..)"
+        minsu "음.. "
+        extend "혹시.."
+        minsu "경민군만 괜찮다면 "
+        extend "내일 같이 저녁 먹을래요?"
+        minsu "물론 내가 살게요."
+        gyoungmin "네... "
+        extend "네???" with vpunch
+        minsu "별건 아니고.. 이번 중간고사.. 굉장히 잘 쳤길래."
         "왠지 모를 쑥스러움이 그의 얼굴에서 느껴진다."
-        gyoungmin "커피챗이요..?"
-        gyoungmin "물론 저는 영광이죠 교수님"
+        gyoungmin "저녁이요..?"
         menu:
             "선배와 약속이 있어서요.":
                 gyoungmin "저 주연선배와 약속이 있어서요."
                 gyoungmin "다음에 뵈어도 될까요?"
                 minsu "아쉽네요"
-                minsu "그럼 그래요."
-                minsu "나는 [s_name]씨 항상 응원해 ~"
+                minsu "알겠어요."
+                minsu "내가 [s_name]군 항상 응원해 ~"
                 hide minsu_standard with fade
                 "여운찬 뒷모습이다."
                 $juyoun_love_num = juyoun_love_num + 1 
@@ -1088,14 +1085,13 @@ label start:
                 $ juyoun_arr[3] = True
             "언제가 좋을까요? 언제든 좋아요.":
                 minsu "그래요?"
-                minsu "[s_name]씨 그럴 거 같았어요."
+                minsu "[s_name]씨 그럴줄 같았어요."
                 minsu "그럼 내일 보는거에요?"
+                gyoungmin "네 교수님!"
                 "왜일까."
-                "이 떨리는 심장."
-                "내 앞엔 더 이상 "
-                "Professor 김민수가 아닌 "
-                "한 명의 수줍은 사춘기 소년이 서있는듯했다."
-                gyoungmin "네 교수님"
+                "뒤돌아가는 교수님의 모습은"
+                "마치 사춘기 소년처럼 "
+                extend "설렘이 느껴졌다."
                 hide minsu_standard with fade
                 $minsu_love_num = minsu_love_num + 1
                 $ minsu_arr[3] = False
@@ -1110,7 +1106,7 @@ label start:
         "(벨소리)" with hpunch
         gyoungmin "으..."
         gyoungmin "몇 신데 전화야.."
-        gyoungmin "2시네.."
+        gyoungmin "2시에 누가 전화를..."
         scene scene7_night_gigsa with fade
         show nightcall
         gyoungmin "주연 선배..?" with hpunch
