@@ -985,9 +985,12 @@ label start:
             "선배에게 족보를 요청한다.":
                 gyoungmin "선배, 혹시.. "
                 extend "컴퓨터학개론 족보 있으세요?"
+                play sound "audio/bgm/족보1.mp3"
                 juyoun "아마 태블릿에 있을건데.."
+                play sound "audio/bgm/족보2.mp3"
                 juyoun "이따 확인하고 보내줄게요."
                 gyoungmin "감사합니다 !"
+                play sound "audio/bgm/족보3.mp3"
                 juyoun "근데 족보는 참고용이니까 "
                 extend "너무 의존하지는 마세요."
                 gyoungmin "넵!!"
