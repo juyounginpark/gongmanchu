@@ -1064,13 +1064,14 @@ label start:
         minsu "음.. "
         extend "혹시.."
         minsu "경민군만 괜찮다면 "
-        extend "내일 같이 저녁 먹을래요?"
+        extend "내일 같이 커피 마실래요..?"
         minsu "물론 내가 살게요."
         gyoungmin "네... "
         extend "네???" with vpunch
-        minsu "별건 아니고.. 이번 중간고사.. 굉장히 잘 쳤길래."
+        minsu "별건 아니고 이번 중간고사.. "
+        extend "굉장히 잘 쳤길래."
         "왠지 모를 쑥스러움이 그의 얼굴에서 느껴진다."
-        gyoungmin "저녁이요..?"
+        gyoungmin "커피요..?"
         menu:
             "선배와 약속이 있어서요.":
                 gyoungmin "저 주연선배와 약속이 있어서요."
@@ -1117,15 +1118,16 @@ label start:
                 "딸깍."
         hide nightcall
         show nightcalling
-        juyoun "[s_name]"
+        juyoun "[s_name]" ### 디폴트 서경민 기준 출력 이상해짐
         extend "이니..?"        
         "그녀의 반쯤 잠긴 목소리가 "
         extend "수화기 너머로 들려왔다."
         gyoungmin "네 선배 .."
         extend "무슨 일이세요?"
-        juyoun "...미안해요"
+    
+        juyoun "자는 중이었지..?"
+        juyoun "...미안해"
         juyoun "자꾸 너 웃는게 생각나서.."
-        juyoun "자는 중이었죠?"
         "창가 사이로 달빛이 새어든다."
         menu:
             "저도 선배 생각중이었는데요":
@@ -1265,7 +1267,49 @@ label start:
 
 
     label scene8_normal: 
-        "Normal"
+        "…"
+        "시간은 빠르게 흐르고 "
+        "어느덧 "
+        extend "헤어짐의 순간이 다가오고 있었다."
+
+        juyoun "여기."
+        extend " 기억나?"
+        gyoungmin "못할리가요."
+        gyoungmin "선배를 처음 만난 곳이잖아요."
+        juyoun "맞아."
+        juyoun "벌써 2년이나 지났네."
+
+        gyoungmin "학사모, 정말 잘 어울려요."
+        gyoungmin "누나, 아니... 선배는 역시 멋지네요."
+
+        juyoun "흐흐... "
+        extend "고마워."
+
+        gyoungmin "... "
+        extend "선ㅂ.."
+
+        "아아. 잠시 후 진행되는 졸업식 진행을 위해 졸업 대상자분들께서는 대강당으로 이동해 주시기 바랍니다."
+        juyoun "경민아, 무슨 말 하려 했어?"
+        gyoungmin "아.. 아니에요..."
+        gyoungmin "그냥, 선배 덕분에... 학교 생활이 정말 행복했어요."
+
+        gyoungmin "아무리 힘든 날도, 선배 생각만 하면 버틸 수 있었거든요."
+
+        juyoun "..."
+        juyoun "나도… 네 덕분에 참 즐거웠어."
+        juyoun "늘 곁에 있어줘서... 정말 고마웠어."
+
+        gyoungmin "저는... 선배가 어디서든 잘 해낼 거라 믿어요."
+
+        gyoungmin "그리고, 계속 응원할게요."
+
+        juyoun "..응. 그 말, 정말 힘이 된다."
+        juyoun "그럼 이제 난... 가볼게."
+
+        gyoungmin "..네, 선배."
+
+        #암흑
+        juyoun "잘 지내... 경민아"
         return
 
 
