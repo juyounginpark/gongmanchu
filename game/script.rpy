@@ -45,6 +45,7 @@ define minsu = Character('김민수 교수',color ="#0ecd2b")
 
 # 컬러_스페셜
 default name = "서경민"
+default s_name = "경민"
 define parkjuyoung = Character('박주영', color="#ffd93f")
 define bridge1 = Character('한국대학교 총장', color="#3c872d")
 define haedal_seo = Character('서주혜', color="#c14772")
@@ -92,6 +93,8 @@ label start:
     juyoun "저는 컴퓨터학부 학생회장 3학년 박주연이에요."
     juyoun "혹시 이름이 어떻게..."
     $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
+    if len(name) > 2:
+        $ s_name = name[1:3]
     # $ na = Character( name , color="#ffffff")
     $ gyoungmin = Character(name, color="#c8ffc8")
     gyoungmin "앗.. 안녕하세요!"
@@ -199,7 +202,7 @@ label start:
         extend "민주당 "
         extend "민주당 "
         extend "민주당.."
-        juyoun "경민,"
+        juyoun "[s_name],"
         extend "너 숙여!"
         gyoungmin "네..? 넵..!!"
         hide juyoun_standard
@@ -242,7 +245,7 @@ label start:
         scene suljari
         show juyoun_love
         juyoun "마시면 돼요."
-        juyoun "제가 경민씨를 지목했거든요."
+        juyoun "제가 [s_name]씨를 지목했거든요."
         gyoungmin "(눈 감은 사람의 대답에 따라 술 마시는 사람이 결정되는 게임이구나..)"
         hide juyoun_love
         show juyoun_standard
@@ -279,7 +282,7 @@ label start:
         extend "오브 "
         extend "데! "
         extend "스!" 
-        hyeonseo "경민아, "
+        hyeonseo "[s_name]아, "
         extend "너가 원하는 사람을 지목하면 돼."
         gyoungmin "으.. "
         extend "응..!!"
@@ -294,7 +297,7 @@ label start:
                 hyeonseo "진짜로?"
                 jump scene4_must
             "박주연":
-                juyoun "경민씨.."
+                juyoun "[s_name]씨.."
                 juyoun "진짜로요"
                 extend "...?"
                 jump scene4_must
@@ -329,7 +332,7 @@ label start:
         hyeonseo "하나"
         juyoun "둘"
         parkjuyoung "셋"
-        parkjuyoung "경민씨. "
+        parkjuyoung "[s_name]씨. "
         extend "마시세요 !"
         hyeonseo "흐흐흐.."
         gyoungmin "(현서 자식.. 일부러 날 먹이려고 ...)"
@@ -339,7 +342,7 @@ label start:
         show juyoun_standard at center
         juyoun "잠깐!" with vpunch
         juyoun "술은 자신의 주량만큼 먹는게 좋아요."
-        juyoun "경민씨 많이 취하신 거 같은데.."
+        juyoun "[s_name]씨 많이 취하신 거 같은데.."
         juyoun "제가 흑장미 .."
         hide juyoun_standard
         show juyoun_love
@@ -376,9 +379,9 @@ label start:
         scene suljari with fade
         scene black with fade
         "야!!" with vpunch
-        "경민아!!" with vpunch
+        "[name]!!" with vpunch
         extend " 일어나봐 !"
-        "선배, 경민이 술 많이 취한거 같은데요?"
+        "선배, 얘 술 많이 취한거 같은데요?"
         "그러게요.. 어떡하지"
         "일단 옮길까요?"
         "네 그래요.."
@@ -463,7 +466,7 @@ label start:
     label scene2_reply:
         gyoungmin "앗.." with vpunch
         gyoungmin "바로 답장이?"
-        minsu "서경민 학생, 확인했습니다."
+        minsu "[name] 학생, 확인했습니다."
         minsu "몸조리 잘하고 다음 수업에서 뵙도록 하지요."
         minsu "그나저나.. "
         extend "이메일 매너가 출중하더군요."
@@ -514,7 +517,7 @@ label start:
                 $juyoun_love_num = juyoun_love_num + 1
             "그냥 지나간다.":
                 gyoungmin "(빨리 지나가야겠다.)"
-        juyoun "어! 경민씨!"
+        juyoun "어! [s_name]씨!"
         juyoun "그땐 잘 들어갔어요?"
         gyoungmin "아... "
         extend "네!!"
@@ -523,7 +526,7 @@ label start:
         hide juyoun_standard
         show juyoun_love
         extend "원래 신입생 때는 다 그래요."
-        juyoun "경민씨가 잘 들어갔다면 다행이네요."
+        juyoun "[s_name]씨가 잘 들어갔다면 다행이네요."
         hide juyoun_love
         show juyoun_standard
         juyoun "그래서 그런데... "
@@ -814,10 +817,10 @@ label start:
                 gyoungmin "그치만 들키면 교수님이 실망하실거야.. "
                 extend "대신 메일이라도 드려야지."
                 "안녕하세요, 교수님."
-                "새내기 수학 강의를 수강 중인 서경민입니다."
+                "새내기 수학 강의를 수강 중인 [name]입니다."
                 "지난 수업에 숙취로 인해 부득이하게 참여하지 못하였습니다."
                 "다음 수업부터는 성실히 참여하겠습니다. 감사합니다."
-                "서경민 올림"
+                "[name] 올림"
                 gyoungmin "그래도 이정도면 괜찮겠지..?"
                 $minsu_love_num = minsu_love_num + 1
         gyoungmin "다시 자야겠다. "
@@ -978,7 +981,7 @@ label start:
         gyoungmin "(내 마음을 들킬뻔 했어..)"
         gyoungmin "(어떡하지 어떡하지)"
         show minsu_standard
-        minsu "경민군,"
+        minsu "[s_name]군,"
         extend " 아직도 공부중인거예요?"
         gyoungmin "앗, 넵 교수님."
         minsu "밤새느라 고생많네요."
@@ -994,13 +997,13 @@ label start:
                 gyoungmin "다음에 뵈어도 될까요?"
                 minsu "아쉽네요"
                 minsu "그럼 그래요."
-                minsu "나는 경민씨 항상 응원해 ~"
+                minsu "나는 [s_name]씨 항상 응원해 ~"
                 hide minsu_standard with fade
                 "여운찬 뒷모습이다."
                 $juyoun_love_num = juyoun_love_num + 1 
             "언제가 좋을까요? 언제든 좋아요.":
                 minsu "그래요?"
-                minsu "경민씨 그럴 거 같았어요."
+                minsu "[s_name]씨 그럴 거 같았어요."
                 minsu "그럼 내일 보는거에요?"
                 "왜일까."
                 "이 떨리는 심장."
@@ -1031,14 +1034,14 @@ label start:
                 "딸깍."
         hide nightcall
         show nightcalling
-        juyoun "경민"
+        juyoun "[s_name]"
         extend "이니..?"        
         "그녀의 반쯤 잠긴 목소리가 "
         extend "수화기 너머로 들려왔다."
         gyoungmin "네 선배 .."
         extend "무슨 일이세요?"
         juyoun "...미안해요"
-        juyoun "자꾸 경민이 웃는게 생각나서.."
+        juyoun "자꾸 너 웃는게 생각나서.."
         juyoun "자는 중이었죠?"
         "창가 사이로 달빛이 새어든다."
         menu:
@@ -1076,7 +1079,7 @@ label start:
                 gyoungmin "죄송해요, 교수님이 남자로 보여요."
                 juyoun "...네"
                 juyoun "알겠어요."
-                juyoun "잘자요. 경민씨"
+                juyoun "잘자요. [s_name]씨"
                 hide nightcalling
                 "삐삐삐.."
                 "어떤 마음이었을까."
@@ -1134,7 +1137,7 @@ label start:
         gyoungmin "제가 대학에 와서 "
         extend "가장 잘 한 선택이었던 것 같아요."
         juyoun "흐흐.."
-        juyoun "나도 경민이 덕분에"
+        juyoun "나도 너 덕분에"
         juyoun "더 열심히 할 수 있던 거 같아."
 
         gyoungmin "선배.."
@@ -1143,7 +1146,7 @@ label start:
         juyoun "고마워."
         juyoun "나도.."
         extend "멀리 있더라도"
-        juyoun "경민이 응원할게."
+        juyoun "[name], 응원할게."
         "END (2 / 4): 만남, 그리고 끝"
         
         #if jokbo:
