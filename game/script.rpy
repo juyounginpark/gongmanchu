@@ -114,6 +114,7 @@ define minsu_arr = [False, False, False, False]
 
 
 label start:
+    $ config.rollback_enabled = False
     "본 게임물은 픽션이며, 등장하는 인물, 지명, 기관, 사건, 단체 및 배경 등은 실제와 어떠한 관련도 없음을 알려드립니다."
     
     show screen stat_overlay
