@@ -1533,38 +1533,42 @@ label start:
         scene scene7_bokdo with fade
         "..몇달 후 캠퍼스 복도"
         show hyeonseo_standard at center
+        play sound "audio/bgm/Kyungpook National University 71.mp3"
         hyeonseo "경민아 !!"
         gyoungmin "어, 현서야. 오랜만이다."
-
+        play sound "audio/bgm/Kyungpook National University 72.mp3"
         hyeonseo "한동안 어디 숨었냐 ~ 도서관에서 잠이라도 잤냐?"
 
         gyoungmin "뭐.. 학점이 전부잖아. 도망치듯 공부 중이지."
 
         "(진동)" with vpunch ############## 진동 효과음
-
+        play sound "audio/bgm/Kyungpook National University 73.mp3"
         hyeonseo "아, 잠깐만. "
         hyeonseo "자기야 ~ 어, 지금 학교야."
         "(...)"
-
+        play sound "audio/bgm/Kyungpook National University 74.mp3"
         hyeonseo "앗 미안, 끊었어!"
         gyoungmin "너 여자친구도 있어?"
-        
+        play sound "audio/bgm/Kyungpook National University 75.mp3"
         hyeonseo "응! 얼마 안 됐는데, 드디어 사귀게 됐어."
 
         gyoungmin "누군데? 너한텐 아까운 사람 아냐?"
-
+        play sound "audio/bgm/Kyungpook National University 76.mp3"
         hyeonseo "너도 아는 사람이야."
+        play sound "audio/bgm/Kyungpook National University 77.mp3"
         hyeonseo "주연 선배."
 
         gyoungmin "..."
         gyoungmin "..."
         gyoungmin "정말?"
 
+        play sound "audio/bgm/Kyungpook National University 78.mp3"
         hyeonseo "어. 내가 몇 번이고 고백했더니 결국 받아줬어."
+        play sound "audio/bgm/Kyungpook National University 79.mp3"
         hyeonseo "믿기지 않지? 내가 주연 선배랑 연애라니."
 
         gyoungmin "...축하해."
-
+        play sound "audio/bgm/Kyungpook National University 80.mp3"
         hyeonseo "어, 저기 온다! "
         extend "나 먼저 갈게!"
         hide hyeonseo_standard
