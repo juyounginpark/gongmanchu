@@ -1130,21 +1130,19 @@ label start:
         juyoun "자꾸 너 웃는게 생각나서.."
         "창가 사이로 달빛이 새어든다."
         menu:
-            "저도 선배 생각중이었는데요":
-                gyoungmin "저도 선배 생각중이었는데요"
+            "저도 선배 생각중이었어요.":
                 juyoun "진짜요?"
                 juyoun "헉.."
                 "말문이 막힌듯한 선배의 소리에.."
                 "잠시 침묵을 유지했다."
                 hide nightcalling
-                if juyoun_arr.count(True)==4 and juyoun_negai:
+                if juyoun_arr.count(True) == 4 and juyoun_negai:
                     jump scene8_love
-                elif juyoun_arr.count(True)==4 and not juyoun_negai:
+                elif juyoun_arr.count(True) == 4 and not juyoun_negai:
                     jump scene8_bye
                 else:
                     jump scene8_normal
             "선배, 저 좋아하세요?":
-                gyoungmin "선배, 저 좋아하세요?"
                 juyoun "네.."
                 juyoun "사실 처음부터 마음에 들었어요."
                 "떨리는 그녀의 목소리에"
@@ -1326,7 +1324,6 @@ label start:
         "민수엔딩"
         return
     
-    #호감도 MAX, 소원권X
     label scene8_bye:
         "…"
         "시간은 빠르게 흐르고 "
