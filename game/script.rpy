@@ -114,6 +114,7 @@ define minsu_arr = [False, False, False, False]
 
 
 label start:
+    $ config.rollback_enabled = False
     "본 게임물은 픽션이며, 등장하는 인물, 지명, 기관, 사건, 단체 및 배경 등은 실제와 어떠한 관련도 없음을 알려드립니다."
     
     show screen stat_overlay
@@ -210,8 +211,11 @@ label start:
         "혹시..."
         scene scene2bridge1 with vpunch
         show hyeonseo_standard
+        play sound "audio/bgm/Kyungpook National University 49.mp3"
         hyeonseo "혹시 컴퓨터학부 신입생인가요??"
+        play sound "audio/bgm/Kyungpook National University 50.mp3"
         hyeonseo "몇 살이에요? 저는 06년생이에요!!"
+        play sound "audio/bgm/Kyungpook National University 51.mp3"
         hyeonseo "잘해봐요! 신입생끼리!!"
         gyoungmin "아.."
         extend " 네.."
@@ -340,6 +344,7 @@ label start:
         gyoungmin "으아.."
         hide hyeonseo_standard
         show hyeonseo_standard at left
+        play sound "audio/bgm/Kyungpook National University 52.mp3"
         hyeonseo "술 "
         extend "마실 "
         extend "시간이 "
@@ -358,8 +363,10 @@ label start:
         juyoun "스타트!"
         hide juyoun_love
         show juyoun_standard at right
+        play sound "audio/bgm/Kyungpook National University 53.mp3"
         hyeonseo "저희... "
         hyeonseo "어!" with hpunch
+        play sound "audio/bgm/Kyungpook National University 54.mp3"
         hyeonseo "신난다. "
         extend "재미난다."
         hyeonseo "더! "
@@ -367,6 +374,7 @@ label start:
         extend "오브 "
         extend "데! "
         extend "스!" 
+        play sound "audio/bgm/Kyungpook National University 55.mp3"
         hyeonseo "[s_name]아, "
         extend "너가 원하는 사람을 지목하면 돼."
         gyoungmin "으.. "
@@ -379,6 +387,7 @@ label start:
     label scene1_4pick:
         menu:
             "이현서":
+                play sound "audio/bgm/Kyungpook National University 56.mp3"
                 hyeonseo "ㅠㅠ"
                 hyeonseo "진짜로?"
                 jump scene4_must
@@ -420,6 +429,7 @@ label start:
                 jump scene1_4pick
 
     label scene4_2:
+        play sound "audio/bgm/Kyungpook National University 57.mp3"
         hyeonseo "4!"
         hyeonseo "하나"
         play sound "audio/bgm/둘.mp3"
@@ -429,6 +439,7 @@ label start:
         play sound "audio/bgm/J6.mp3"
         parkjuyoung "[s_name]씨. "
         extend "마시세요 !"
+        play sound "audio/bgm/Kyungpook National University 58.mp3"
         hyeonseo "흐흐흐.."
         gyoungmin "(현서 자식.. 일부러 날 먹이려고 ...)"
         gyoungmin "넵..!!!"
@@ -475,6 +486,7 @@ label start:
         play sound "audio/bgm/자다음게임으로넘어.mp3"
         juyoun "자.."
         extend "다음 게임으로 넘어갈까요?"
+        play sound "audio/bgm/Kyungpook National University 59.mp3"
         hyeonseo "주연이가 좋아하는 ..."
         scene black with fade
         gyoungmin "아... "
@@ -601,6 +613,7 @@ label start:
         "(웅성웅성)"
         gyoungmin "뭐지?"
         show hyeonseo_standard
+        play sound "audio/bgm/Kyungpook National University 60.mp3"
         hyeonseo "동아리 가두모집 기간 아니야?"
         gyoungmin "아 동아리 가두모집 기간이구나."
         gyoungmin "(어떤 동아리가 나를 기다리려나 ...)"
@@ -608,8 +621,10 @@ label start:
         extend "저 사람은?"
         hide hyeonseo_standard
         show hyeonseo_happy
+        play sound "audio/bgm/Kyungpook National University 61.mp3"
         hyeonseo "맞지? "
         extend "주연 선배."
+        play sound "audio/bgm/Kyungpook National University 62.mp3"
         hyeonseo "그때 나랑 둘이서 너 챙기느라 엄청 고생했었어."
         gyoungmin "헐 그래? "
         extend "으아.. 어떡하지"
@@ -622,6 +637,7 @@ label start:
         gyoungmin "선배가 동아리 홍보도 하시는건가 ..."
         gyoungmin "근데 어떡하지... 그날 너무 민폐를 끼쳐서"
         gyoungmin "말 걸기 부끄러워..."
+        play sound "audio/bgm/Kyungpook National University 63.mp3"
         hyeonseo "뭐 어때?"
         hyeonseo "한번 말 걸어봐 !"
         menu:
@@ -665,6 +681,7 @@ label start:
         menu:
             "가입한다":
                 juyoun "후훗, 동아리 예절도 많이 알려줄게요."
+                play sound "audio/bgm/Kyungpook National University 64.mp3"
                 hyeonseo "그럼 저도 가입할래요!"
                 "그렇게 나는 내 친구 현서와 함께 동아리에 가입하게 되었다."
                 jump scene3_1
@@ -695,12 +712,14 @@ label start:
         scene scene3_1_haedalroom with fade
         
         "(동아리실에 들어가며) "
+        play sound "audio/bgm/Kyungpook National University 65.mp3"
         hyeonseo "아..안녕하세요!"
 
         show juyoun_standard at center
         play sound "audio/bgm/안녕둘다동아리실은처음.mp3"
         juyoun "안녕~ "
         extend "둘다 동아리실은 처음이지?"
+        play sound "audio/bgm/Kyungpook National University 66.mp3"
         hyeonseo "넵!!"
         play sound "audio/bgm/반가워이렇게긴장할필요.mp3"
         juyoun "반가워, 후훗. "
@@ -716,7 +735,7 @@ label start:
 
         show hyeonseo_standard at left 
         with easeinleft
-        
+        play sound "audio/bgm/Kyungpook National University 67.mp3"
         hyeonseo "셋째, 동아리실에서 몰래 게임하다 걸리면 벌금 천원 ~"
         juyoun "ㅎㅎㅎ"
         hide juyoun_standard
@@ -970,6 +989,7 @@ label start:
         gyoungmin "(머리를 싸매며) "
         extend "으... 살려 줘..."
         hyeonseo "(진동)" with vpunch
+        play sound "audio/bgm/Kyungpook National University 68.mp3"
         hyeonseo "1교시 출석 대신 해줄까?"
 
         menu:
@@ -1106,6 +1126,7 @@ label start:
                     "(웅성웅성)"
                     gyoungmin "헉.. 전부 처음보는 유형이었어..."
                     show hyeonseo_standard
+                    play sound "audio/bgm/Kyungpook National University 69.mp3"
                     hyeonseo "작년 족보 쓸모 없네. "
                     extend "수업이나 열심히 들을걸.."
                 else:
@@ -1115,6 +1136,7 @@ label start:
                     "(웅성웅성)"
                     gyoungmin "시험... 망쳐버렸다..."
                     show hyeonseo_standard
+                    play sound "audio/bgm/Kyungpook National University 70.mp3"
                     hyeonseo "너도? 나도..."
                     gyoungmin "그래도... 준비한건 다 풀었더니 후련하다."
                     $minsu_love_num = minsu_love_num + 1
@@ -1171,19 +1193,25 @@ label start:
         gyoungmin "(내 마음을 들킬뻔 했어..)"
         gyoungmin "(어떡하지 어떡하지)"
         show minsu_standard
+        play sound "audio/bgm/Kyungpook National University 20.mp3"
         minsu "[s_name]군,"
         extend " 아직도 공부중인거예요?"
         gyoungmin "앗, 넵 교수님."
+        play sound "audio/bgm/Kyungpook National University 21.mp3"
         minsu "밤새느라 고생많네요."
         gyoungmin "하하.."
         gyoungmin "(교수님.. 때문이잖아요..)"
+        play sound "audio/bgm/Kyungpook National University 22.mp3"
         minsu "음.. "
         extend "혹시.."
+        play sound "audio/bgm/Kyungpook National University 23.mp3"
         minsu "경민군만 괜찮다면 "
         extend "내일 같이 커피 마실래요..?"
+        play sound "audio/bgm/Kyungpook National University 24.mp3"
         minsu "물론 내가 살게요."
         gyoungmin "네... "
         extend "네???" with vpunch
+        play sound "audio/bgm/Kyungpook National University 25.mp3"
         minsu "별건 아니고 이번 중간고사.. "
         extend "굉장히 잘 쳤길래."
         "왠지 모를 쑥스러움이 그의 얼굴에서 느껴진다."
@@ -1192,6 +1220,7 @@ label start:
             "선배와 약속이 있어서요.":
                 gyoungmin "저 주연선배와 약속이 있어서요."
                 gyoungmin "다음에 뵈어도 될까요?"
+                play sound "audio/bgm/Kyungpook National University 26.mp3"
                 minsu "아쉽네요"
                 minsu "알겠어요."
                 minsu "내가 [s_name]군 항상 응원해 ~"
@@ -1201,6 +1230,7 @@ label start:
                 $ juyoun_arr[3] = False
                 $ juyoun_arr[3] = True
             "언제가 좋을까요? 언제든 좋아요.":
+                play sound "audio/bgm/Kyungpook National University 27.mp3"
                 minsu "그래요?"
                 minsu "[s_name]씨 그럴줄 같았어요."
                 minsu "그럼 내일 보는거에요?"
@@ -1321,63 +1351,84 @@ label start:
 
 
     label scene8_love:
+        scene black with fade
         "…"
         "시간은 빠르게 흐르고 "
         "어느덧 "
         extend "헤어짐의 순간이 다가오고 있었다."
 
+        scene scene1yard with fade
+        play sound "audio/bgm/8(1).mp3"
         juyoun "여기."
         extend " 기억나?"
         gyoungmin "못할리가요."
         gyoungmin "선배를 처음 만난 곳이잖아요."
+        play sound "audio/bgm/8(2).mp3"
         juyoun "맞아."
+        play sound "audio/bgm/8(3).mp3"
         juyoun "벌써 2년이나 지났네."
 
         gyoungmin "그때, 동아리 들어온거."
         gyoungmin "제가 대학에 와서 "
         extend "가장 잘 한 선택이었던 것 같아요."
+        play sound "audio/bgm/8(4).mp3"
         juyoun "흐흐.. "
         extend "그런 말, 갑자기 들으면… 좀 부끄럽잖아."
+        play sound "audio/bgm/8(5).mp3"
         juyoun "그치만.. "
         extend "나도… 네가 있어서 정말 다행이었어."
+        play sound "audio/bgm/8(6).mp3"
         juyoun "힘들고 외롭던 시간들도, 너랑 있으니까 견딜 수 있었거든."
 
         gyoungmin "..."
         gyoungmin "선배... "
         extend "진심으로 졸업 축하드려요..."
+        play sound "audio/bgm/8(7).mp3"
         juyoun "...고마워"
 
         "아아. 잠시 후 진행되는 졸업식 진행을 위해 졸업 대상자분들께서는 대강당으로 이동해 주시기 바랍니다."
+        play sound "audio/bgm/8(8).mp3"
         juyoun "...그럼 이제 가볼게."
         gyoungmin "..네 선배"
         #암흑
 
         "..."
         "..."
+        play sound "audio/bgm/8(9).mp3"
         "경민아...!!!" with vpunch
         gyoungmin "ㄴ..네?"
+        play sound "audio/bgm/8(10).mp3"
         juyoun "너 덕분에… "
         extend "학교 생활을 버텨낼 수 있었어 !"
 
+        play sound "audio/bgm/8(11).mp3"
         juyoun "웃고, 울고, 힘든 날도 많았지만…"
+        play sound "audio/bgm/8(12).mp3"
         juyoun "너가 곁에 있어 그 전부를 버텨낼 수 있었어."
 
+        play sound "audio/bgm/8(13).mp3"
         juyoun "그런데... "
         extend "그런데... 말야..."
         
+        play sound "audio/bgm/8(14).mp3"
         juyoun "앞으로 너 없이 이 길을 걷는다는 게… 너무 두려워."
 
         gyoungmin "선배..."
 
+        play sound "audio/bgm/8(15).mp3"
         juyoun "경민아..."
+        play sound "audio/bgm/8(16).mp3"
         juyoun "기억해? 예전에 내가 받은 '소원권'.."
+        play sound "audio/bgm/8(17).mp3"
         juyoun "뭐든지 하나 들어준다고 말했던 그거…"
 
         gyoungmin "... "
         extend "그걸 잊을 리 없잖아요."
  
 
+        play sound "audio/bgm/8(18).mp3"
         juyoun "나… 그걸 지금, 쓸게."
+        play sound "audio/bgm/8(19).mp3"
         juyoun "앞으로도 너의 곁에… 남아도 될까?"
 
         
@@ -1385,33 +1436,42 @@ label start:
             "당연하지.":
                 # 놀란표정
                 gyoungmin "나도... 누나와 함께라면"
-                gyoungmin "이 길이 더 이상 두렵지 않아."-
+                gyoungmin "이 길이 더 이상 두렵지 않아."
 
                 #눈 시울이 붉어지며
+                play sound "audio/bgm/8(20).mp3"
                 juyoun "경민아… 좋아해."
+                play sound "audio/bgm/8(21).mp3"
                 juyoun "진심으로... 너를 좋아해."
 
                 gyoungmin "나도..."
                 #마무리
+                "END: 주연과의 진실된 사랑" 
                 return
 
 
     label scene8_normal: 
+        scene black with fade
         "…"
         "시간은 빠르게 흐르고 "
         "어느덧 "
         extend "헤어짐의 순간이 다가오고 있었다."
 
+        scene scene1yard with fade
+        play sound "audio/bgm/8(1).mp3" 
         juyoun "여기."
         extend " 기억나?"
         gyoungmin "못할리가요."
         gyoungmin "선배를 처음 만난 곳이잖아요."
+        play sound "audio/bgm/8(2).mp3"
         juyoun "맞아."
+        play sound "audio/bgm/8(3).mp3"
         juyoun "벌써 2년이나 지났네."
 
         gyoungmin "학사모, 정말 잘 어울려요."
         gyoungmin "누나, 아니... 선배는 역시 멋지네요."
 
+        play sound "audio/bgm/nm8(4).mp3"
         juyoun "흐흐... "
         extend "고마워."
 
@@ -1419,6 +1479,7 @@ label start:
         extend "선ㅂ.."
 
         "아아. 잠시 후 진행되는 졸업식 진행을 위해 졸업 대상자분들께서는 대강당으로 이동해 주시기 바랍니다."
+        play sound "audio/bgm/nm8(5).mp3"
         juyoun "경민아, 무슨 말 하려 했어?"
         gyoungmin "아.. 아니에요..."
         gyoungmin "그냥, 선배 덕분에... 학교 생활이 정말 행복했어요."
@@ -1426,34 +1487,195 @@ label start:
         gyoungmin "아무리 힘든 날도, 선배 생각만 하면 버틸 수 있었거든요."
 
         juyoun "..."
+        play sound "audio/bgm/nm8(6).mp3"
         juyoun "나도… 네 덕분에 참 즐거웠어."
+        play sound "audio/bgm/nm8(7).mp3"
         juyoun "늘 곁에 있어줘서... 정말 고마웠어."
 
         gyoungmin "저는... 선배가 어디서든 잘 해낼 거라 믿어요."
 
         gyoungmin "그리고, 계속 응원할게요."
 
+        play sound "audio/bgm/nm8(8).mp3"
         juyoun "..응. 그 말, 정말 힘이 된다."
+        play sound "audio/bgm/nm8(9).mp3"
         juyoun "그럼 이제 난... 가볼게."
 
         gyoungmin "..네, 선배."
 
         #암흑
+        play sound "audio/bgm/nm8(10).mp3"
         juyoun "잘 지내... 경민아"
+        "END: 노말 엔딩" 
         return
 
 
     label scene8_bad:
-        "bad"
+        gyoungmin "선배는 그냥..."
+        gyoungmin "좋은 사람이었을 뿐이야."
+        # 암전
+        
+
+        scene scene1yard with fade
+        show juyoun_standard at center
+        play sound "audio/bgm/ntr1.mp3"
+        juyoun "안녕, 경민아 !"
+        gyoungmin "아.. 안녕하세요."
+        gyoungmin "(그 날 이후로, 어쩐지 선배가 멀게 느껴진다.)"
+
+        gyoungmin "선배, 저 수업있어서 먼저 가볼게요.."
+        play sound "audio/bgm/ntr2.mp3"
+        juyeon "응, 그래. 조심히 가.."
+        hide juyoun_standard
+
+        gyoungmin "(조금씩 멀어지는 게 나을지도 몰라..)"
+
+        scene scene7_bokdo with fade
+        "..몇달 후 캠퍼스 복도"
+        show hyeonseo_standard at center
+        hyeonseo "경민아 !!"
+        gyoungmin "어, 현서야. 오랜만이다."
+
+        hyeonseo "한동안 어디 숨었냐 ~ 도서관에서 잠이라도 잤냐?"
+
+        gyoungmin "뭐.. 학점이 전부잖아. 도망치듯 공부 중이지."
+
+        "(진동)" with vpunch ############## 진동 효과음
+
+        hyeonseo "아, 잠깐만. "
+        hyeonseo "자기야 ~ 어, 지금 학교야."
+        "(...)"
+
+        hyeonseo "앗 미안, 끊었어!"
+        gyoungmin "너 여자친구도 있어?"
+        
+        hyeonseo "응! 얼마 안 됐는데, 드디어 사귀게 됐어."
+
+        gyoungmin "누군데? 너한텐 아까운 사람 아냐?"
+
+        hyeonseo "너도 아는 사람이야."
+        hyeonseo "주연 선배."
+
+        gyoungmin "..."
+        gyoungmin "..."
+        gyoungmin "정말?"
+
+        hyeonseo "어. 내가 몇 번이고 고백했더니 결국 받아줬어."
+        hyeonseo "믿기지 않지? 내가 주연 선배랑 연애라니."
+
+        gyoungmin "...축하해."
+
+        hyeonseo "어, 저기 온다! "
+        extend "나 먼저 갈게!"
+        hide hyeonseo_standard
+
+        gyoungmin "(나는 선배에게 가볍게 목례했지만,)"
+        gyoungmin "(선배는 본채만채하며 현서와 함께 떠나버렸다.)"
+        gyoungmin "(...나의 문제겠지)"
+        "END: 배드 엔딩" 
         return
+
 
     label scene8_daehakwon: 
-        "대학원"
+        scene black with fade
+        ####### 암흑
+        "(... 똑똑)"
+        gyoungmin "교수님, 저.. 서경민입니다."
+        minsu "어서 와요. 들어오세요."
+        ####### 교수실
+        scene scene9_c_labroom with fade
+        show minsu_standard at center
+        minsu "거기 앉아서 조금만 기다려요. "
+        extend "정리할게 있어서요."
+        gyoungmin "(교수님의 집중하는 모습.. 왠지 색다르게 보인다.)"
+        gyoungmin "(이상하게... 멋있어.)"
+
+        minsu "기다리게 해서 미안해요."
+        gyoungmin "아뇨 !" with vpunch
+        gyoungmin "전혀요 !" with vpunch
+        minsu "하하"
+        minsu "너무 긴장하지 말아요. "
+        extend "학점이 걸린 상담은 아니니까."
+        gyoungmin "네.. 감사합니다."
+        minsu "어제 느꼈어요."
+        minsu "경민 학생이 발표 준비하던 모습, 진지한 눈빛…"
+        gyoungmin "..."
+        minsu "학생으로서의 ‘본업’에 열중하는 모습이…"
+        minsu "저한텐 오히려 떨림을 줬어요."
+
+        gyoungmin "왠지.. 교수님이 평소보다 어리게 느껴진다."
+
+        minsu "여기.."
+        #########조교 지원서
+        minsu "조교 지원서에요."
+
+        gyoungmin "..."
+        gyoungmin "네?"
+        
+        minsu "좀 더 가까이서 나랑 일해보지 않을래요?"
+        minsu "잘 읽어보고.."
+        minsu "서명해주세요."
+
+        minsu "대신.. 그 아래에 서명하면"
+        minsu "첫 출근 전날에 같이 영화봐요."
+        gyoungmin "영화요…?"
+
+        minsu "후훗. 때로는 인생에 변수가 있는 게 더욱 재밌죠."
+
+        gyoungmin "... "
+        extend "좋아요."
+        "END: 납치" 
         return
 
 
-    label scene8_proffessorlove: 
-        "민수엔딩"
+    label scene8_proffessorlove:
+        scene black with fade
+        gyoungmin "교수님, 저 서경민입니다."
+        minsu "응, 들어와요."
+        minsu "조금만 기다려줘요. 금방 정리할게요."
+
+        scene scene9_c_labroom with fade
+        show minsu_standard at center
+        gyoungmin "어제도 그랬지만… "
+        extend "교수님만 보면 지금도 심장이 뛰어."
+
+        minsu "기다리게 해서 미안해요. 이런 건 제가 먼저 준비하고 있어야 했는데."
+        gyoungmin "괜찮아요."
+
+        gyoungmin "오히려… 교수님이 본업에 집중하시는 모습,"
+        
+        gyoungmin "잠깐이라도 볼 수 있어서 좋았어요."
+
+        minsu "그 말, 고맙네요."
+        minsu "근데… 요즘 자주 생각했어요."
+        minsu "경민 씨가 열중하는 모습을 보고, "
+        extend "나도 뭔가를 다시 시작하고 싶다고."
+
+        gyoungmin "....그게 무슨 말씀이세요?"
+        minsu "모르겠어요."
+        extend "학생이라는 울타리 안에서만 보려 했는데,"
+        minsu "어느 순간부터... 그냥 한 사람으로 보이더라고요."
+
+        gyoungmin "...저도, 교수님ㅇ 그냥 '교수님'이 아닌 순간이 있었어요."
+        minsu "그래요?"
+        gyoungmin "처음에는 존경이었고..."
+        extend "그 다음엔 동경이었고..."
+        extend "지금은, 감히 이름조차 쉽게 부를 수 없을 만큼... 조심스러운 감정이에요."
+        minsu "...그 조심스러움, 저도 같아요"
+        minsu "그래서 선을 긋는 것도, 넘는 것도 조심스러워요"
+        extend "하지만... 이런 건 분명하죠."
+
+        gyoungmin "어떤 건가요?"
+        minsu "당신의 진심이, 내 하루를 흔들었다는 것."
+        
+        gyoungmin "...그럼, 저도 말할 수 있어요."
+        gyoungmin "교수님이 제 마음에 들어왔다는 건"
+        extend "제 스스로도 어쩔 수 없다는 것."
+        minsu "지금은... 이 마음을 천천히 알아가도 괜찮을까요?"
+        gyoungmin "...네 저도 지금, 그렇게 생각했어요."
+        gyoungmin "(왜인지 내 앞에는 교수 김민수가 아닌,)"
+        extend "(풋풋한 감정을 느끼는 98학번 신입생이 있는 기분이었다.)"
+        "END: 새로운 사랑" 
         return
     
     label scene8_bye:
@@ -1484,11 +1706,7 @@ label start:
         juyoun "나도.."
         extend "멀리 있더라도"
         juyoun "[name], 응원할게."
-        "END (2 / 4): 만남, 그리고 끝"
-        
-        #if jokbo:
-        #족보를 썼을 때->시험 문제에 재대로 답 못함.
-        #else:
-        #족보를 안썼을 때->시험 문제에 대해 청산유수로 답해 호감을 삼. 히든엔딩.      
+        "END: 만남, 그리고 끝" 
+        return
 
-    return
+    return  
