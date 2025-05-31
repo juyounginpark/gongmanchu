@@ -83,48 +83,48 @@ label start:
     juyoun "혹시 컴퓨터학부 신입생인가요?"
 
     "아.. "
-    extend "넵 !!"
+    extend "넵!!"
     hide juyoun_shy
     show juyoun_standard at center
-    "(우와,, 예쁘다)"
+    "(우와.. 예쁘다)"
    
 
-    juyoun "저는 컴퓨터학부 학생회장 3학년 '박주연'이에요."
-    juyoun "혹시 이름이 어떻게 되나요?"
+    juyoun "저는 컴퓨터학부 학생회장 3학년 박주연이에요."
+    juyoun "혹시 이름이 어떻게..."
     $ name = renpy.call_screen("set_name",title="당신의 이름은?", init_name="서경민")
     # $ na = Character( name , color="#ffffff")
     $ gyoungmin = Character(name, color="#c8ffc8")
-    gyoungmin "앗,, 안녕하세요!"
+    gyoungmin "앗.. 안녕하세요!"
     gyoungmin "저는 새로 입학하게 된 1학년 [name]입니다!"
 
     juyoun "후훗, 반가워요."
     juyoun "대강당까지 안내해 줄게요."
 
-    gyoungmin "(선배의 따듯한 손,,)"
+    gyoungmin "(선배의 따듯한 손..)"
 
-    juyoun "앞으로 선배랑 마주하게 되면 가볍게 목례하는거, "
+    juyoun "앞으로 선배랑 마주하게 되면 가볍게 목례하는 거"
     extend "좋은 습관이 될 거에요."
     juyoun "저를 따라와요."
 
     show juyoun_standard at center
     menu:
         "선배를 따라간다.":
-            gyoungmin "잘 부탁드립니다...!!"
+            gyoungmin "잘 부탁드립니다..!!"
             hide juyoun_standard
             show juyoun_love
             juyoun "(웃음)"
             hide juyoun_love
             jump scene1_1
         "선배를 따라가지 않는다.":
-            gyoungmin "저 아세요? 근데 .. ?"
-            juyoun "네? 아니 ... 죄송해요 .."
+            gyoungmin "저 아세요? 근데..?"
+            juyoun "네? 아니... 죄송해요.."
             hide juyoun_standard
             show juyoun_sad at center
-            juyoun "잠깐이었지만, 만나서 즐거웠어요..!! 그럼 안녕히.."
+            juyoun "잠깐이었지만 만나서 즐거웠어요..!! 그럼 다음에 또 봬요..!"
             hide juyoun_sad
             with dissolve
             show gyoungmin_standard at center
-            gyoungmin "정말이지 ... 여자들이란... 나를 가만 못둬서 문제야"
+            gyoungmin "정말이지... 여자들이란... 나를 가만 못 둬서 문제라니까.."
             jump badend1
 
     label badend1:
@@ -133,8 +133,8 @@ label start:
         scene black 
         "(10년 후)"
         show gyoungmin_standard at center
-        gyoungmin "나는 대학시절 내내 화장실에서 밥을 먹었지 .."
-        gyoungmin "다시 돌아간다면 그 선배를 따라갔을텐데 ...."
+        gyoungmin "나는 대학시절 내내 화장실에서 밥을 먹었다."
+        gyoungmin "만약 그때 그 선배를 따라갔다면 달라졌을까..?"
         hide gyoungmin_standard
         "BAD END 1: 별볼일 없는 엔딩"
         return
@@ -144,22 +144,22 @@ label start:
         hide gyoungmin_standard
         scene scene2bridge1
         bridge1 "우리 한국대학교에 입학하게 되신 여러분 진심으로 환영합니다."
-        bridge1 "우리 한국대학교는 예로부터 ..."
+        bridge1 "우리 한국대학교는 예로부터..."
         gyoungmin "(지루하다...)"
         gyoungmin "(빨리 끝나라...)"
 
         scene black with fade
         gyoungmin "Zzzz.........."
         "저기요?"
-        "혹시 ..."
+        "혹시..."
         scene scene2bridge1 with vpunch
         show hyeonseo_standard
-        hyeonseo "혹시 컴퓨터 학부 신입생이죠??"
-        hyeonseo "06년생?? 저도 06년생이에요!!"
-        hyeonseo "잘해봐요 신입생끼리!!"
-        gyoungmin "아 .."
-        extend " 네 .."
-        gyoungmin "(다시 자야지 .. )"
+        hyeonseo "혹시 컴퓨터학부 신입생인가요??"
+        hyeonseo "몇 살이에요? 저는 06년생이에요!!"
+        hyeonseo "잘해봐요! 신입생끼리!!"
+        gyoungmin "아.."
+        extend " 네.."
+        gyoungmin "(아 피곤하다..)"
         hide hyeonseo_standard
         jump scene1_2
 
@@ -170,12 +170,12 @@ label start:
         juyoun "입학식 어땠어요?"
         hide juyoun_standard
         show juyoun_shy
-        juyoun "정말 자랑스럽지 않던가요 ..?"
+        juyoun "정말 자랑스럽지 않나요?"
         hide juyoun_shy
         show juyoun_standard
-        juyoun "저 고등학교때 정말 한국대학교에 오고 싶었거든요."
-        juyoun "앗..! 말이 길었죠.. 끝나고 신입생 대상 뒷풀이 하는데"
-        juyoun "오라는 말을 하려 했었어요.."
+        juyoun "저 고등학교 때 한국대학교 정말 오고 싶었거든요."
+        juyoun "앗..! 저 너무 말이 길었죠.. 끝나고 신입생 뒷풀이 하는데"
+        juyoun "오라는 말을 하려 했었어요"
     menu:
         "좋아요!":
             jump bridge_soju 
@@ -185,7 +185,7 @@ label start:
         hide juyoun_standard
         show juyoun_love
         juyoun "(웃음)"
-        juyoun "\'배 터지는 탕수육\'으로 와요."
+        juyoun "학교 정문에 있는 배 터지는 탕수육으로 와요."
         hide juyoun_love
         jump scene1_3
 
@@ -200,7 +200,7 @@ label start:
         extend "민주당 "
         extend "민주당.."
         juyoun "경민,"
-        extend " 너 숙여!"
+        extend "너 숙여!"
         gyoungmin "네..? 넵..!!"
         hide juyoun_standard
         scene black with fade
@@ -220,7 +220,7 @@ label start:
     menu:
         "마셔!":
             juyoun "흐흐흐.. 진짜로요?"
-            juyoun "좋아요. "
+            juyoun "좋아요."
             extend "이제 눈 떠봐요."
             jump scene1_4
 
@@ -242,8 +242,8 @@ label start:
         scene suljari
         show juyoun_love
         juyoun "마시면 돼요."
-        juyoun "제가 경민씨를 지목했었거든요."
-        gyoungmin "(눈 감은 사람 대답에 따라 지목된 사람이 마시는거구나..)"
+        juyoun "제가 경민씨를 지목했거든요."
+        gyoungmin "(눈 감은 사람의 대답에 따라 술 마시는 사람이 결정되는 게임이구나..)"
         hide juyoun_love
         show juyoun_standard
         gyoungmin "진짜 "
@@ -251,16 +251,11 @@ label start:
         hide juyoun_standard
         show juyoun_standard at right
         show hyeonseo_standard with vpunch
-        hyeonseo "누가 술을 마셔"
-        hyeonseo "서경민이 마셔!"
-        hyeonseo "서!" with vpunch
-        extend "경!" with vpunch
-        extend "민!" with vpunch
         gyoungmin "(꿀꺽)"
-        gyoungmin "으아 .."
+        gyoungmin "으아.."
         hide hyeonseo_standard
         show hyeonseo_standard at left
-        hyeonseo "술도 "
+        hyeonseo "술 "
         extend "마실 "
         extend "시간이 "
         extend "없어요"
@@ -272,11 +267,11 @@ label start:
         extend "게임.."
         hide juyoun_standard
         show juyoun_love at right
-        juyoun "스타트 !"
+        juyoun "스타트!"
         hide juyoun_love
         show juyoun_standard at right
         hyeonseo "저희... "
-        extend "아"
+        hyeonseo "어!" with hpunch
         hyeonseo "신난다. "
         extend "재미난다."
         hyeonseo "더! "
@@ -288,7 +283,7 @@ label start:
         extend "너가 원하는 사람을 지목하면 돼."
         gyoungmin "으.. "
         extend "응..!!"
-        juyoun "재밌자고 하는 거니깐.. "
+        juyoun "게임이니깐.. "
         extend "편히 골라요."
         jump scene1_4pick
 
@@ -527,12 +522,12 @@ label start:
         juyoun "후후 "
         hide juyoun_standard
         show juyoun_love
-        extend "원래 신입생때는 다 그래요."
+        extend "원래 신입생 때는 다 그래요."
         juyoun "경민씨가 잘 들어갔다면 다행이네요."
         hide juyoun_love
         show juyoun_standard
         juyoun "그래서 그런데... "
-        extend "저희 동아리 \"해달\"에 가입할 생각 없어요?"
+        extend "저희 동아리 \'해달\'에 가입할 생각 없어요?"
         juyoun "다양한 소모임과 "
         extend "해커톤 등 이벤트가 많아요!"
         juyoun "코딩을 잘 모르더라도 C언어, 웹, 파이썬 부트캠프를 열어서.."
@@ -550,7 +545,7 @@ label start:
                 jump badend2
     label badend2:
         gyoungmin "저는... "
-        extend "선배한테 배울 정도는 아닌거 같아서요."
+        extend "선배한테 배울 정도는 아닌 거 같아서요."
         hide juyoun_standard
         show juyoun_sad at center
         juyoun "아.. "
@@ -570,20 +565,20 @@ label start:
         scene scene3_1_haedalroom with fade
         
         "(동아리실에 들어가며) "
-        hyeonseo "아..안녕하세요 !"
+        hyeonseo "아..안녕하세요!"
 
         show juyoun_standard at center
 
-        juyoun "안녕 ~ "
-        extend "둘 다 동아리실은 처음이지?"
-        hyeonseo "넵 !!"
+        juyoun "안녕~ "
+        extend "둘다 동아리실은 처음이지?"
+        hyeonseo "넵!!"
         juyoun "반가워, 후훗. "
-        extend "그렇게 긴장할 필요 없어요 ~"
-        juyoun "우선 오늘은 처음이니, 동아리 예절부터 알려줄게요."
+        extend "그렇게 긴장할 필요 없어요~"
+        juyoun "우선 오늘은 처음이니까 동아리 예절부터 알려줄게요."
         juyoun "동아리 예절 첫째, "
         extend "동아리실에 들어오게 되면 누구든지 인사부터 하기. "
         juyoun "둘째, "
-        extend "사용 후 깨끗하게 정리하기 !"
+        extend "사용 후 깨끗하게 정리하기!"
 
         show hyeonseo_standard at left 
         with easeinleft
@@ -596,15 +591,15 @@ label start:
         hide juyoun_love
         show juyoun_standard
         gyoungmin "네, 명심할게요 !"
-        juyoun "규칙을 잘 지키면 더욱 재밌게 동아리 활동을 할 수 있답니다 ~"
-        juyoun "앗, 혹시 둘 다 동아리 MT 신청했나요?"
+        juyoun "규칙을 잘 지키면 더욱 재밌게 동아리 활동을 할 수 있답니다~"
+        juyoun "앗, 혹시 둘다 동아리 MT 신청했나요?"
 
         menu:
-            "네 !":
+            "네!":
                 hide juyoun_standard
                 show juyoun_love
-                juyoun "좋아요 ! "
-                extend "준비물 꼼꼼히 챙겨서 MT 날에 봐요."
+                juyoun "좋아요! "
+                extend "준비물 꼼꼼히 챙겨서 MT날에 봬요."
                 hide hyeonseo_standard
                 hide juyoun_love
                 $juyoun_love_num = juyoun_love_num + 1
@@ -625,7 +620,7 @@ label start:
         haedal_yang "저희가 게임을 하나 준비했는데요," 
         haedal_yang "상품은 무려 "
         haedal_seo "뭘까요?"
-        haedal_yang "\"양주\"" with hpunch
+        haedal_yang "양주" with hpunch
         extend ", 양주를 드립니다!"
         "(사람들의 환호)" with vpunch
         gyoungmin "(기대된다.)"
@@ -650,7 +645,7 @@ label start:
         haedal_seo "아! "
         extend "2조가 걸렸네요. 2조부터 시작하겠습니다!"
         gyoungmin "(우리 조다 !)"
-        gyoungmin "(꼭 잘해서 주연 선배한테 좋은 모습 보여야겠어!!)"
+        gyoungmin "(꼭 잘해서 주연 선배한테 좋은 모습 보여야 겠어!!)"
         scene mg1
         haedal_yang "다음 영화 장면을 보고 영화 제목을 맞춰주시면 됩니다."
         haedal_yang "그럼 시작합니다."
@@ -673,7 +668,7 @@ label start:
         haedal_seo "그럼, 다음 문제로 넘어가겠습니다."
         scene mg3
         default mg3 = False
-        gyoungmin "나와 주연 선배.. 였으면 좋겠다."
+        gyoungmin "나와 주연 선배..였으면 좋겠다."
         menu:
             "타이토닉":
                 $mg3 = False
@@ -685,11 +680,11 @@ label start:
             haedal_seo "정답입니다!"
         else:
             haedal_yang "아쉽습니다."
-            haedal_yang "정답은 3번 \'타이나닉\'이였습니다!"
+            haedal_yang "정답은 3번 \'타이타닉\'이였습니다!"
         
 
         haedal_seo "다음은 마지막 문제입니다."
-        haedal_seo "조금 어려운데요 ..?"
+        haedal_seo "조금 어려운데요..?"
         scene mg4
         default mg4 = False
         gyoungmin "내가 어렸을때 자주 보던 짱구잖아?"
@@ -707,15 +702,15 @@ label start:
             haedal_yang "정답은 3번 \'부리부리 3분 대진격\'이였습니다!"
         if mg2 and mg3 and mg4:
             haedal_seo "문제를 모두 맞추셨네요!"
-            haedal_seo "이러면 1등 확정이겠는데요 ~"
+            haedal_seo "이러면 1등 확정이겠는데요~"
         elif (mg2 and mg3) or (mg3 and mg4)or (mg2 and mg4):
-            haedal_yang "한 문제밖에 안틀렸네요 ~"
+            haedal_yang "한 문제밖에 안틀렸네요~"
             haedal_seo "영화 좀 봐요 ~ !!"
         elif mg2 or mg3 or mg4:
-            haedal_seo "한 문제 맞추셨는데요 ~"
+            haedal_seo "한 문제 맞추셨는데요~"
             haedal_yang "약간 아쉽습니다!"
         else:
-            haedal_seo "이러면 꼴등 확정인가요~ ?"
+            haedal_seo "아~ 이러면 꼴등 확정인가요~?"
             haedal_yang "아쉽습니다."
             haedal_seo "영화! 많이 보세요."
         scene black with fade
@@ -735,7 +730,7 @@ label start:
         elif mg2 or mg3 or mg4:
             "문제를 한 문제 밖에 맞추지 못했지만,"
             "어떤가"
-            "당당했으면 된거 아닐까"
+            "당당했으면 된 거 아닐까"
         else:
             "문제를 하나도 맞추지 못해"
             "부끄러웠지만,"
@@ -752,7 +747,7 @@ label start:
         gyoungmin "네 ! "
         extend "대학 로망을 하나 이룬거 같아요.."
         juyoun "그래요? "
-        extend "다행이네 ..."
+        extend "다행이네..."
         juyoun "그래서 그런데..."
 
         "왠지 모를 떨림이 느껴진다."
@@ -787,7 +782,7 @@ label start:
                 juyoun "이거 의외네.."
                 hide juyoun_shy
                 show juyoun_love
-                juyoun "그럼 내일 보는거에요?"
+                juyoun "그럼 내일 보는 거에요?"
                 hide juyoun_love
                 scene black with fade
                 "그렇게 해달 MT는 정신없이 끝났다."
@@ -845,12 +840,12 @@ label start:
         gyoungmin "..ㄴ...네?..."
         hide juyoun_standard
         show juyoun_love
-        juyoun "아직은 아니고요. "
-        extend "그냥... 같이 있고 싶어서 불렀어요."
+        juyoun "아.. 아직은 아니고요. "
+        extend "그냥.. 같이 있고 싶어서 불렀어요."
         gyoungmin "(선배 얼굴이 벚꽃보다 예쁘게 느껴진다...)"
         "순간"
         "나는 지금을 "
-        extend "영원지 잊을 수 없을 것이라고"
+        extend "내 스무살 중 가장 아름다운 순간일 거라고"
         "직감했다."
         scene black with fade
         hide juyoun_love
@@ -868,7 +863,7 @@ label start:
         juyoun "이거 마시면서 해요."
         "'선배가 준 에너지 드링크'를 획득했다."
         juyoun "너무 한번에 달리면 탈나요. "
-        extend "50분 공부 후 10분 휴식, 이게 효율 최고."
+        extend "50분 공부하고 10분 휴식, 이게 효율 최고!"
         gyoungmin "선배도 밤새세요?"
         juyoun "같이 있으면 덜 피곤하잖아요."
         jump scene5_menu
@@ -904,12 +899,12 @@ label start:
             "선배에게 족보를 요청한다.":
                 gyoungmin "선배, 혹시.. "
                 extend "컴퓨터학개론 족보 있으세요?"
-                juyoun "아마 태블릿에 있을텐데.."
+                juyoun "아마 태블릿에 있을건데.."
                 juyoun "이따 확인하고 보내줄게요."
                 gyoungmin "감사합니다 !"
-                juyoun "근데 족보는 참고용이니 "
+                juyoun "근데 족보는 참고용이니까 "
                 extend "너무 의존하지는 마세요."
-                gyoungmin "넵 !!"
+                gyoungmin "넵!!"
                 "'컴퓨터학개론 족보'를 획득했다."
                 $jbo = True
                 hide juyoun_standard
@@ -947,7 +942,7 @@ label start:
                 show juyoun_standard at center
                 juyoun "괜찮아요. 시험은 이미 끝났고, "
                 extend "아직 남은 프로젝트가 40\%에요."
-                juyoun "우리 같이 프로젝트나 해볼까요 ?"
+                juyoun "우리 같이 프로젝트나 해볼까요?"
                 gyoungmin "정말요 ??"
                 hide juyoun_standard
                 show juyoun_love
@@ -971,13 +966,13 @@ label start:
         juyoun "그럼 다행이에요"
         hide juyoun_love
         show juyoun_love
-        gyoungmin "선배..그런데..."
+        gyoungmin "선배.. 그런데..."
         juyoun "네?"
         gyoungmin "아!"with hpunch
         extend "아니에요!!!" with hpunch
         gyoungmin "잠깐 저 화장실 좀 갔다올게요!!"
         juyoun "크크크"
-        extend " 그래요. 갔다와요."
+        extend "그래요. 갔다와요."
         hide juyoun
         scene scene7_bokdo
         gyoungmin "(내 마음을 들킬뻔 했어..)"
@@ -986,11 +981,11 @@ label start:
         minsu "경민군,"
         extend " 아직도 공부중인거예요?"
         gyoungmin "앗, 넵 교수님."
-        minsu "밤샘하느라 고생많네요."
+        minsu "밤새느라 고생많네요."
         minsu "혹시 내일 나랑 둘이 커피챗 할 생각 없나요... "
         extend "?"
         minsu "이번 중간고사.. 굉장히 잘 쳤길래."
-        "왠지모를 쑥스러움이 그의 얼굴에서 느껴진다."
+        "왠지 모를 쑥스러움이 그의 얼굴에서 느껴진다."
         gyoungmin "커피챗이요..?"
         gyoungmin "물론 저는 영광이죠 교수님"
         menu:
@@ -1044,7 +1039,7 @@ label start:
         extend "무슨 일이세요?"
         juyoun "...미안해요"
         juyoun "자꾸 경민이 웃는게 생각나서.."
-        juyoun "자는 중이였죠?"
+        juyoun "자는 중이었죠?"
         "창가 사이로 달빛이 새어든다."
         menu:
             "저도 선배 생각중이었는데요":
@@ -1053,6 +1048,7 @@ label start:
                 juyoun "헉.."
                 "말문이 막힌듯한 선배의 소리에.."
                 "잠시 침묵을 유지했다."
+                hide nightcalling
                 if juyoun_love_num==4 and juyoun_negai:
                     jump scene8_love
                 elif juyoun_love_num==4 and juyoun_negai==False:
@@ -1069,6 +1065,7 @@ label start:
                 gyoungmin "선배 줄곧 좋아했어요."
                 juyoun "고마워요.."
                 juyoun "날 좋아해줘서"
+                hide nightcalling
                 if juyoun_love_num==4 and juyoun_negai:
                     jump scene8_love
                 elif juyoun_love_num==4 and juyoun_negai==False:
@@ -1100,7 +1097,8 @@ label start:
                 gyoungmin "물론 선배가 좋은 사람이긴하지만.."
                 gyoungmin "그 이상은 아니에요."
                 juyoun "네.."
-                extend "잘자요.. 이만"
+                extend "잘자요.. 이만 끊을게요.."
+                hide nightcalling
                 jump scene8_bad
 
 
@@ -1116,8 +1114,37 @@ label start:
         "대학원"
     label scene8_proffessorlove: 
         "민수엔딩"
+    
+    #호감도 MAX, 소원권X
     label scene8_bye:
-        "소원권X"
+        "…"
+        "시간은 빠르게 흐르고 "
+        "어느덧 "
+        scene scene1yard with fade
+        extend "헤어짐의 순간이 다가오고 있었다."
+
+        juyoun "여기."
+        extend " 기억나?"
+        gyoungmin "못할리가요."
+        gyoungmin "선배를 처음 만난 곳이잖아요."
+        juyoun "맞아."
+        juyoun "벌써 2년이나 지났네."
+
+        gyoungmin "그때, 동아리 들어온거."
+        gyoungmin "제가 대학에 와서 "
+        extend "가장 잘 한 선택이었던 것 같아요."
+        juyoun "흐흐.."
+        juyoun "나도 경민이 덕분에"
+        juyoun "더 열심히 할 수 있던 거 같아."
+
+        gyoungmin "선배.."
+        gyoungmin "졸업 "
+        extend "진심으로 축하드려요."
+        juyoun "고마워."
+        juyoun "나도.."
+        extend "멀리 있더라도"
+        juyoun "경민이 응원할게."
+        "END (2 / 4): 만남, 그리고 끝"
         
         #if jokbo:
         #족보를 썼을 때->시험 문제에 재대로 답 못함.
