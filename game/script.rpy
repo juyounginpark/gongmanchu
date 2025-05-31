@@ -1685,7 +1685,7 @@ label start:
        
         minsu "어느 순간부터... 그냥 한 사람으로 보이더라고요."
 
-        gyoungmin "...저도, 교수님ㅇ 그냥 '교수님'이 아닌 순간이 있었어요."
+        gyoungmin "...저도, 교수님 그냥 '교수님'이 아닌 순간이 있었어요."
         play sound "audio/bgm/Kyungpook National University 44.mp3"
         minsu "그래요?"
         gyoungmin "처음에는 존경이었고..."
@@ -1707,8 +1707,8 @@ label start:
         play sound "audio/bgm/Kyungpook National University 48.mp3"
         minsu "지금은... 이 마음을 천천히 알아가도 괜찮을까요?"
         gyoungmin "...네 저도 지금, 그렇게 생각했어요."
-        gyoungmin "(왜인지 내 앞에는 교수 김민수가 아닌,)"
-        extend "(풋풋한 감정을 느끼는 98학번 신입생이 있는 기분이었다.)"
+        gyoungmin "(왜인지 내 앞에는 교수 김민수가 아닌,"
+        extend "풋풋한 감정을 느끼는 98학번 신입생이 있는 기분이었다.)"
         "END: 새로운 사랑" 
         return
     
