@@ -1326,58 +1326,77 @@ label start:
         "어느덧 "
         extend "헤어짐의 순간이 다가오고 있었다."
 
+        play sound "audio/bgm/8(1).mp3"
         juyoun "여기."
         extend " 기억나?"
         gyoungmin "못할리가요."
         gyoungmin "선배를 처음 만난 곳이잖아요."
+        play sound "audio/bgm/8(2).mp3"
         juyoun "맞아."
+        play sound "audio/bgm/8(3).mp3"
         juyoun "벌써 2년이나 지났네."
 
         gyoungmin "그때, 동아리 들어온거."
         gyoungmin "제가 대학에 와서 "
         extend "가장 잘 한 선택이었던 것 같아요."
+        play sound "audio/bgm/8(4).mp3"
         juyoun "흐흐.. "
         extend "그런 말, 갑자기 들으면… 좀 부끄럽잖아."
+        play sound "audio/bgm/8(5).mp3"
         juyoun "그치만.. "
         extend "나도… 네가 있어서 정말 다행이었어."
+        play sound "audio/bgm/8(6).mp3"
         juyoun "힘들고 외롭던 시간들도, 너랑 있으니까 견딜 수 있었거든."
 
         gyoungmin "..."
         gyoungmin "선배... "
         extend "진심으로 졸업 축하드려요..."
+        play sound "audio/bgm/8(7).mp3"
         juyoun "...고마워"
 
         "아아. 잠시 후 진행되는 졸업식 진행을 위해 졸업 대상자분들께서는 대강당으로 이동해 주시기 바랍니다."
+        play sound "audio/bgm/8(8).mp3"
         juyoun "...그럼 이제 가볼게."
         gyoungmin "..네 선배"
         #암흑
 
         "..."
         "..."
+        play sound "audio/bgm/8(9).mp3"
         "경민아...!!!" with vpunch
         gyoungmin "ㄴ..네?"
+        play sound "audio/bgm/8(10).mp3"
         juyoun "너 덕분에… "
         extend "학교 생활을 버텨낼 수 있었어 !"
 
+        play sound "audio/bgm/8(11).mp3"
         juyoun "웃고, 울고, 힘든 날도 많았지만…"
+        play sound "audio/bgm/8(12).mp3"
         juyoun "너가 곁에 있어 그 전부를 버텨낼 수 있었어."
 
+        play sound "audio/bgm/8(13).mp3"
         juyoun "그런데... "
         extend "그런데... 말야..."
         
+        play sound "audio/bgm/8(14).mp3"
         juyoun "앞으로 너 없이 이 길을 걷는다는 게… 너무 두려워."
 
         gyoungmin "선배..."
 
+        play sound "audio/bgm/8(15).mp3"
         juyoun "경민아..."
+        play sound "audio/bgm/8(16).mp3"
         juyoun "기억해? 예전에 내가 받은 '소원권'.."
+        play sound "audio/bgm/8(17).mp3"
         juyoun "뭐든지 하나 들어준다고 말했던 그거…"
 
         gyoungmin "... "
         extend "그걸 잊을 리 없잖아요."
  
 
+        play sound "audio/bgm/8(18).mp3"
         juyoun "나… 그걸 지금, 쓸게."
+        play sound "audio/bgm/8(19).mp3"
         juyoun "앞으로도 너의 곁에… 남아도 될까?"
 
         
@@ -1388,7 +1407,9 @@ label start:
                 gyoungmin "이 길이 더 이상 두렵지 않아."-
 
                 #눈 시울이 붉어지며
+                play sound "audio/bgm/8(20).mp3"
                 juyoun "경민아… 좋아해."
+                play sound "audio/bgm/8(21).mp3"
                 juyoun "진심으로... 너를 좋아해."
 
                 gyoungmin "나도..."
@@ -1402,16 +1423,20 @@ label start:
         "어느덧 "
         extend "헤어짐의 순간이 다가오고 있었다."
 
+        play sound "audio/bgm/8(1).mp3" 
         juyoun "여기."
         extend " 기억나?"
         gyoungmin "못할리가요."
         gyoungmin "선배를 처음 만난 곳이잖아요."
+        play sound "audio/bgm/8(2).mp3"
         juyoun "맞아."
+        play sound "audio/bgm/8(3).mp3"
         juyoun "벌써 2년이나 지났네."
 
         gyoungmin "학사모, 정말 잘 어울려요."
         gyoungmin "누나, 아니... 선배는 역시 멋지네요."
 
+        play sound "audio/bgm/nm8(4).mp3"
         juyoun "흐흐... "
         extend "고마워."
 
@@ -1419,6 +1444,7 @@ label start:
         extend "선ㅂ.."
 
         "아아. 잠시 후 진행되는 졸업식 진행을 위해 졸업 대상자분들께서는 대강당으로 이동해 주시기 바랍니다."
+        play sound "audio/bgm/nm8(5).mp3"
         juyoun "경민아, 무슨 말 하려 했어?"
         gyoungmin "아.. 아니에요..."
         gyoungmin "그냥, 선배 덕분에... 학교 생활이 정말 행복했어요."
@@ -1426,26 +1452,85 @@ label start:
         gyoungmin "아무리 힘든 날도, 선배 생각만 하면 버틸 수 있었거든요."
 
         juyoun "..."
+        play sound "audio/bgm/nm8(6).mp3"
         juyoun "나도… 네 덕분에 참 즐거웠어."
+        play sound "audio/bgm/nm8(7).mp3"
         juyoun "늘 곁에 있어줘서... 정말 고마웠어."
 
         gyoungmin "저는... 선배가 어디서든 잘 해낼 거라 믿어요."
 
         gyoungmin "그리고, 계속 응원할게요."
 
+        play sound "audio/bgm/nm8(8).mp3"
         juyoun "..응. 그 말, 정말 힘이 된다."
+        play sound "audio/bgm/nm8(9).mp3"
         juyoun "그럼 이제 난... 가볼게."
 
         gyoungmin "..네, 선배."
 
         #암흑
+        play sound "audio/bgm/nm8(10).mp3"
         juyoun "잘 지내... 경민아"
         return
 
 
     label scene8_bad:
-        "bad"
+        gyoungmin "선배는 그냥..."
+        gyoungmin "좋은 사람이었을 뿐이야."
+        # 암전
+
+        play sound "audio/bgm/ntr1.mp3"
+        juyoun "안녕, 경민아 !"
+        gyoungmin "아.. 안녕하세요."
+        gyoungmin "(그 날 이후로, 어쩐지 선배가 멀게 느껴진다.)"
+
+        gyoungmin "선배, 저 수업있어서 먼저 가볼게요.."
+        play sound "audio/bgm/ntr2.mp3"
+        juyeon "응, 그래. 조심히 가.."
+
+        gyoungmin "(조금씩 멀어지는 게 나을지도 몰라..)"
+
+        "..몇달 후 캠퍼스 복도"
+        hyeonseo "경민아 !!"
+        gyoungmin "어, 현서야. 오랜만이다."
+
+        hyeonseo "한동안 어디 숨었냐 ~ 도서관에서 잠이라도 잤냐?"
+
+        gyoungmin "뭐.. 학점이 전부잖아. 도망치듯 공부 중이지."
+
+        "(진동)" with vpunch ############## 진동 효과음
+
+        hyeonseo "아, 잠깐만. "
+        hyeonseo "자기야 ~ 어, 지금 학교야."
+        "(...)"
+
+        hyeonseo "앗 미안, 끊었어!"
+        gyoungmin "너 여자친구도 있어?"
+        
+        hyeonseo "응! 얼마 안 됐는데, 드디어 사귀게 됐어."
+
+        gyoungmin "누군데? 너한텐 아까운 사람 아냐?"
+
+        hyeonseo "너도 아는 사람이야."
+        hyeonseo "주연 선배."
+
+        gyoungmin "..."
+        gyoungmin "..."
+        gyoungmin "정말?"
+
+        hyeonseo "어. 내가 몇 번이고 고백했더니 결국 받아줬어."
+        hyeonseo "믿기지 않지? 내가 주연 선배랑 연애라니."
+
+        gyoungmin "...축하해."
+
+        hyeonseo "어, 저기 온다! "
+        extend "나 먼저 갈게!"
+
+        gyoungmin "(나는 선배에게 가볍게 목례했지만,)"
+        gyoungmin "(선배는 본채만채하며 현서와 함께 떠나버렸다.)"
+        gyoungmin "(...나의 문제겠지)"
         return
+
 
     label scene8_daehakwon: 
         "대학원"
@@ -1491,4 +1576,4 @@ label start:
         #else:
         #족보를 안썼을 때->시험 문제에 대해 청산유수로 답해 호감을 삼. 히든엔딩.      
 
-    return
+    return  
