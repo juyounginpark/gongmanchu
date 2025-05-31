@@ -114,6 +114,7 @@ define minsu_arr = [False, False, False, False]
 
 
 label start:
+    $ config.rollback_enabled = False
     "본 게임물은 픽션이며, 등장하는 인물, 지명, 기관, 사건, 단체 및 배경 등은 실제와 어떠한 관련도 없음을 알려드립니다."
     
     show screen stat_overlay
@@ -1350,11 +1351,13 @@ label start:
 
 
     label scene8_love:
+        scene black with fade
         "…"
         "시간은 빠르게 흐르고 "
         "어느덧 "
         extend "헤어짐의 순간이 다가오고 있었다."
 
+        scene scene1yard with fade
         play sound "audio/bgm/8(1).mp3"
         juyoun "여기."
         extend " 기억나?"
@@ -1443,15 +1446,18 @@ label start:
 
                 gyoungmin "나도..."
                 #마무리
+                "END: 주연과의 진실된 사랑" 
                 return
 
 
     label scene8_normal: 
+        scene black with fade
         "…"
         "시간은 빠르게 흐르고 "
         "어느덧 "
         extend "헤어짐의 순간이 다가오고 있었다."
 
+        scene scene1yard with fade
         play sound "audio/bgm/8(1).mp3" 
         juyoun "여기."
         extend " 기억나?"
@@ -1500,6 +1506,7 @@ label start:
         #암흑
         play sound "audio/bgm/nm8(10).mp3"
         juyoun "잘 지내... 경민아"
+        "END: 노말 엔딩" 
         return
 
 
@@ -1507,7 +1514,10 @@ label start:
         gyoungmin "선배는 그냥..."
         gyoungmin "좋은 사람이었을 뿐이야."
         # 암전
+        
 
+        scene scene1yard with fade
+        show juyoun_standard at center
         play sound "audio/bgm/ntr1.mp3"
         juyoun "안녕, 경민아 !"
         gyoungmin "아.. 안녕하세요."
@@ -1516,10 +1526,13 @@ label start:
         gyoungmin "선배, 저 수업있어서 먼저 가볼게요.."
         play sound "audio/bgm/ntr2.mp3"
         juyeon "응, 그래. 조심히 가.."
+        hide juyoun_standard
 
         gyoungmin "(조금씩 멀어지는 게 나을지도 몰라..)"
 
+        scene scene7_bokdo with fade
         "..몇달 후 캠퍼스 복도"
+        show hyeonseo_standard at center
         hyeonseo "경민아 !!"
         gyoungmin "어, 현서야. 오랜만이다."
 
@@ -1554,20 +1567,115 @@ label start:
 
         hyeonseo "어, 저기 온다! "
         extend "나 먼저 갈게!"
+        hide hyeonseo_standard
 
         gyoungmin "(나는 선배에게 가볍게 목례했지만,)"
         gyoungmin "(선배는 본채만채하며 현서와 함께 떠나버렸다.)"
         gyoungmin "(...나의 문제겠지)"
+        "END: 배드 엔딩" 
         return
 
 
     label scene8_daehakwon: 
-        "대학원"
+        scene black with fade
+        ####### 암흑
+        "(... 똑똑)"
+        gyoungmin "교수님, 저.. 서경민입니다."
+        minsu "어서 와요. 들어오세요."
+        ####### 교수실
+        scene scene9_c_labroom with fade
+        show minsu_standard at center
+        minsu "거기 앉아서 조금만 기다려요. "
+        extend "정리할게 있어서요."
+        gyoungmin "(교수님의 집중하는 모습.. 왠지 색다르게 보인다.)"
+        gyoungmin "(이상하게... 멋있어.)"
+
+        minsu "기다리게 해서 미안해요."
+        gyoungmin "아뇨 !" with vpunch
+        gyoungmin "전혀요 !" with vpunch
+        minsu "하하"
+        minsu "너무 긴장하지 말아요. "
+        extend "학점이 걸린 상담은 아니니까."
+        gyoungmin "네.. 감사합니다."
+        minsu "어제 느꼈어요."
+        minsu "경민 학생이 발표 준비하던 모습, 진지한 눈빛…"
+        gyoungmin "..."
+        minsu "학생으로서의 ‘본업’에 열중하는 모습이…"
+        minsu "저한텐 오히려 떨림을 줬어요."
+
+        gyoungmin "왠지.. 교수님이 평소보다 어리게 느껴진다."
+
+        minsu "여기.."
+        #########조교 지원서
+        minsu "조교 지원서에요."
+
+        gyoungmin "..."
+        gyoungmin "네?"
+        
+        minsu "좀 더 가까이서 나랑 일해보지 않을래요?"
+        minsu "잘 읽어보고.."
+        minsu "서명해주세요."
+
+        minsu "대신.. 그 아래에 서명하면"
+        minsu "첫 출근 전날에 같이 영화봐요."
+        gyoungmin "영화요…?"
+
+        minsu "후훗. 때로는 인생에 변수가 있는 게 더욱 재밌죠."
+
+        gyoungmin "... "
+        extend "좋아요."
+        "END: 납치" 
         return
 
 
-    label scene8_proffessorlove: 
-        "민수엔딩"
+    label scene8_proffessorlove:
+        scene black with fade
+        gyoungmin "교수님, 저 서경민입니다."
+        minsu "응, 들어와요."
+        minsu "조금만 기다려줘요. 금방 정리할게요."
+
+        scene scene9_c_labroom with fade
+        show minsu_standard at center
+        gyoungmin "어제도 그랬지만… "
+        extend "교수님만 보면 지금도 심장이 뛰어."
+
+        minsu "기다리게 해서 미안해요. 이런 건 제가 먼저 준비하고 있어야 했는데."
+        gyoungmin "괜찮아요."
+
+        gyoungmin "오히려… 교수님이 본업에 집중하시는 모습,"
+        
+        gyoungmin "잠깐이라도 볼 수 있어서 좋았어요."
+
+        minsu "그 말, 고맙네요."
+        minsu "근데… 요즘 자주 생각했어요."
+        minsu "경민 씨가 열중하는 모습을 보고, "
+        extend "나도 뭔가를 다시 시작하고 싶다고."
+
+        gyoungmin "....그게 무슨 말씀이세요?"
+        minsu "모르겠어요."
+        extend "학생이라는 울타리 안에서만 보려 했는데,"
+        minsu "어느 순간부터... 그냥 한 사람으로 보이더라고요."
+
+        gyoungmin "...저도, 교수님ㅇ 그냥 '교수님'이 아닌 순간이 있었어요."
+        minsu "그래요?"
+        gyoungmin "처음에는 존경이었고..."
+        extend "그 다음엔 동경이었고..."
+        extend "지금은, 감히 이름조차 쉽게 부를 수 없을 만큼... 조심스러운 감정이에요."
+        minsu "...그 조심스러움, 저도 같아요"
+        minsu "그래서 선을 긋는 것도, 넘는 것도 조심스러워요"
+        extend "하지만... 이런 건 분명하죠."
+
+        gyoungmin "어떤 건가요?"
+        minsu "당신의 진심이, 내 하루를 흔들었다는 것."
+        
+        gyoungmin "...그럼, 저도 말할 수 있어요."
+        gyoungmin "교수님이 제 마음에 들어왔다는 건"
+        extend "제 스스로도 어쩔 수 없다는 것."
+        minsu "지금은... 이 마음을 천천히 알아가도 괜찮을까요?"
+        gyoungmin "...네 저도 지금, 그렇게 생각했어요."
+        gyoungmin "(왜인지 내 앞에는 교수 김민수가 아닌,)"
+        extend "(풋풋한 감정을 느끼는 98학번 신입생이 있는 기분이었다.)"
+        "END: 새로운 사랑" 
         return
     
     label scene8_bye:
@@ -1598,11 +1706,7 @@ label start:
         juyoun "나도.."
         extend "멀리 있더라도"
         juyoun "[name], 응원할게."
-        "END (2 / 4): 만남, 그리고 끝"
-        
-        #if jokbo:
-        #족보를 썼을 때->시험 문제에 재대로 답 못함.
-        #else:
-        #족보를 안썼을 때->시험 문제에 대해 청산유수로 답해 호감을 삼. 히든엔딩.      
+        "END: 만남, 그리고 끝" 
+        return
 
     return  
